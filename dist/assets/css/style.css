@@ -2644,8 +2644,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-top: 0 !important;
 }
 
-.content-visible {
-  content-visibility: visible !important;
+.content-visible-auto {
+  content-visibility: auto !important;
 }
 
 *,
@@ -11949,6 +11949,7 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
   font-size: inherit;
   color: #eb9a10;
   cursor: pointer;
+  content-visibility: auto;
 }
 .stars:not([data-stars=clickable]) {
   pointer-events: none;

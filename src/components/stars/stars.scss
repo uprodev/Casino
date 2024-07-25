@@ -3,6 +3,7 @@
     font-size: inherit;
     color: #eb9a10;
     cursor: pointer;
+    content-visibility: auto;
 
     &:not([data-stars="clickable"]) {
         pointer-events: none;
