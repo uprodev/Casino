@@ -1,0 +1,27 @@
+.btn-green {
+    font-family: var(--bm-font-family);
+    font-size: 15px;
+    font-weight: var(--bm-font-weight);
+    line-height: 1;
+    display: inline-flex;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 999px;
+    border: none;
+    background: var(--bm-cta-button-background);
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    padding: 8px 16px;
+
+    @media #{$mouse-device} {
+        &:hover {
+            background: var(--bm-cta-button-hover-background);
+        }
+    }
+}

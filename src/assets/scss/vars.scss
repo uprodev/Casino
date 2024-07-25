@@ -1,0 +1,64 @@
+$minwidth: 320px;
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 992px;
+$mq-xl: 1280px;
+$mq-xxl: 1536px;
+$mouse-device: "(hover: hover) and (pointer: fine)";
+$touch-device: "(hover: none) and (pointer: coarse)";
+
+$font-size: 1.6rem;
+
+$mainFontFamily: "SBSFont", sans-serif;
+
+:root {
+    --bm-font-family: SBSFont, sans-serif;
+    --core-white: #FFFFFF;
+    --main-accent: #0FCEA0;
+    --main-action: #0FCEA0;
+    --main-action-hover: #1CB48F;
+    --bm-cta-button-background: var(--main-action);
+    --bm-cta-button-hover-background: var(--main-action-hover);
+    --dark-background: #1A1555;
+    --light-background: #F7F8FA;
+    --active-bm-tag-background: #2A247A;
+    --bm-counter-background: #E1F4ED;
+    --bm-font-weight: 700;
+
+    --blue: #1c2642;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #3cb371;
+    --teal: #20c997;
+    --cyan: #014c6b;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #525ddc;
+    --secondary: #6c757d;
+    --success: #3cb371;
+    --info: #014c6b;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+    //icons
+    --icon-check-black: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgMTEgOSIgZmlsbD0ibm9uZSI+DQo8cGF0aCBkPSJNMC44NzAxMTcgNC40MjAxNUw0LjAwOTcyIDcuNTU5NzVMMTAuMTI5IDEuNDQwNDMiIHN0cm9rZT0iIzFDMjY0MiIgc3Ryb2tlLXdpZHRoPSIyIi8+DQo8L3N2Zz4=");
+    --icon-info-black: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2IiBmaWxsPSJub25lIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8xMDU5MV8zNzkzMykiPg0KPHBhdGggZD0iTTguNTAwNjUgMTQuNjY2OEMxMi4xODI1IDE0LjY2NjggMTUuMTY3MyAxMS42ODIxIDE1LjE2NzMgOC4wMDAxNkMxNS4xNjczIDQuMzE4MjYgMTIuMTgyNSAxLjMzMzUgOC41MDA2NSAxLjMzMzVDNC44MTg3NSAxLjMzMzUgMS44MzM5OCA0LjMxODI2IDEuODMzOTggOC4wMDAxNkMxLjgzMzk4IDExLjY4MjEgNC44MTg3NSAxNC42NjY4IDguNTAwNjUgMTQuNjY2OFoiIHN0cm9rZT0iIzFDMjY0MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjxwYXRoIGQ9Ik04LjUgMTAuNjY2N1Y4IiBzdHJva2U9IiMxQzI2NDIiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjxwYXRoIGQ9Ik04LjUgNS4zMzM1SDguNTA2NjciIHN0cm9rZT0iIzFDMjY0MiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzEwNTkxXzM3OTMzIj4NCjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuNSkiLz4NCjwvY2xpcFBhdGg+DQo8L2RlZnM+DQo8L3N2Zz4=");
+    --icon-arrow-right-black: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE3IDEwIiBmaWxsPSJub25lIj4NCjxwYXRoIGQ9Ik0xLjEzNDEzIDUuNjY0MDdIMTQuNTU4M0wxMi4zMzQ2IDcuOTgyNDRDMTIuMDg2NCA4LjI0MTE2IDEyLjA4NTUgOC42NjE2MSAxMi4zMzI0IDguOTIxNTZDMTIuNTc5NCA5LjE4MTU0IDEyLjk4MDggOS4xODI1IDEzLjIyODkgOC45MjM4MUwxNi41NDEgNS40NzA2OUMxNi41NDEzIDUuNDcwNDkgMTYuNTQxNCA1LjQ3MDI2IDE2LjU0MTYgNS40NzAwNkMxNi43ODkxIDUuMjExMzQgMTYuNzg5OSA0Ljc4OTUzIDE2LjU0MTcgNC41Mjk5NUMxNi41NDE1IDQuNTI5NzUgMTYuNTQxMyA0LjUyOTUxIDE2LjU0MTEgNC41MjkzMkwxMy4yMjkgMS4wNzYxOUMxMi45ODA5IDAuODE3NTM5IDEyLjU3OTUgMC44MTg0MzUgMTIuMzMyNSAxLjA3ODQ1QzEyLjA4NTUgMS4zMzg0IDEyLjA4NjUgMS43NTg4NSAxMi4zMzQ2IDIuMDE3NTdMMTQuNTU4MyA0LjMzNTk0SDEuMTM0MTNDMC43ODQwNDIgNC4zMzU5NCAwLjUwMDI1NiA0LjYzMzI0IDAuNTAwMjU2IDVDMC41MDAyNTYgNS4zNjY3NiAwLjc4NDA0MiA1LjY2NDA3IDEuMTM0MTMgNS42NjQwN1oiIGZpbGw9IiMxQzI2NDIiLz4NCjwvc3ZnPg==");
+    --icon-check-circle-green: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDIxIDI0IiBmaWxsPSJub25lIj4NCjxwYXRoIGQ9Ik0wLjUgMTJDMC41IDYuNDc3MTUgNC45NzcxNSAyIDEwLjUgMkMxNi4wMjI4IDIgMjAuNSA2LjQ3NzE1IDIwLjUgMTJDMjAuNSAxNy41MjI4IDE2LjAyMjggMjIgMTAuNSAyMkM0Ljk3NzE1IDIyIDAuNSAxNy41MjI4IDAuNSAxMloiIGZpbGw9IiNFMUY0RTciLz4NCjxwYXRoIGQ9Ik02LjI1NTg2IDExLjkyNjdMOS4xMzM4MyAxNC44MDQ3TDE0Ljc0MzIgOS4xOTUzMSIgc3Ryb2tlPSIjMUMyNjQyIiBzdHJva2Utd2lkdGg9IjIiLz4NCjwvc3ZnPg==");
+    --icon-chevron-right-black: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA1IDkiIGZpbGw9Im5vbmUiPg0KPHBhdGggZD0iTTAuMDk3MjQ4MSA4LjQzNDc5Qy0wLjAyNDY5MjUgOC4xNzE4NSAwLjAyNDQwMzEgNy44NjEyOSAwLjIyMTUwMyA3LjY0ODc5TDIuNTExMjYgNS4xODAxNEMyLjg2NzAzIDQuNzk2NTggMi44NjcwMyA0LjIwMzYyIDIuNTExMjYgMy44MjAwNkwwLjIyMTUwNCAxLjM1MTQxQzAuMDI0NDAzMSAxLjEzODkxIC0wLjAyNDY5MjUgMC44MjgzNDQgMC4wOTcyNDgxIDAuNTY1NDA5QzAuMzEwODM5IDAuMTA0ODUzIDAuOTIzMyAwLjAwODAzMTUyIDEuMjY4NTQgMC4zODAyNDRMNC40NTkwOCAzLjgyMDA2QzQuODE0ODUgNC4yMDM2MiA0LjgxNDg1IDQuNzk2NTggNC40NTkwOCA1LjE4MDE0TDEuMjY4NTQgOC42MTk5NUMwLjkyMzMgOC45OTIxNiAwLjMxMDgzOSA4Ljg5NTM0IDAuMDk3MjQ4MSA4LjQzNDc5WiIgZmlsbD0iIzFDMjY0MiIvPg0KPC9zdmc+");
+}

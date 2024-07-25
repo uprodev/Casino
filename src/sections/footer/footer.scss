@@ -1,0 +1,56 @@
+.footer-info {
+
+    &__head {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 24px;
+    }
+    &__logo {
+        height: 41px;
+
+        & img, & svg {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+
+        & img, & svg {
+            height: 21px;
+            width: auto;
+            display: block;
+
+            @media #{$mouse-device} {
+                &:hover {
+                    & path {
+                        fill: var(--bm-cta-button-hover-background);
+                    }
+                }
+            }
+        }
+    }
+
+    &__logo-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & > li {
+            flex: 0 1 auto;
+            height: 45px;
+        }
+        & img {
+            height: 100%;
+            width: auto;
+            max-width: 150px;
+            max-height: 45px;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.list_how_to {
+    margin-bottom: 30px
+}
+
+.list_how_to__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 13px;
+    padding-bottom: 12px
+}
+
+.list_how_to__description {
+    margin-bottom: 16px
+}
+
+.list_how_to__list_wrapper {
+    padding: 20px;
+    border-radius: 4px;
+    background: #F4F4F4;
+    box-shadow: 0 6px 0 rgba(0,0,0,.08)
+}
+
+.list_how_to__list {
+    margin-left: 0;
+    counter-reset: item
+}
+
+.list_how_to__item {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+    padding-left: 54px!important
+}
+
+.list_how_to__item::before {
+    font-family: var(--primary-font-family);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 150%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    content: counter(item);
+    counter-increment: item;
+    text-align: center;
+    color: #1C2642;
+    background: url("data:image/svg+xml,%3Csvg width='30' height='39' viewBox='0 0 30 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.75 38.6484V4.21094C0.75 2.2434 2.34496 0.648438 4.3125 0.648438H25.6875C27.655 0.648438 29.25 2.2434 29.25 4.21094V38.6484L15 30.3359L0.75 38.6484Z' fill='%23FFCB3F'/%3E%3C/svg%3E%0A") no-repeat center
+}
+
+.list_how_to__item_title {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 4px
+}
+
+.list_how_to__item_text {
+    font-size: 16px;
+    line-height: 24px
+}
+
+.list_how_to__item_image {
+    display: block;
+    max-width: 80%;
+    margin: 10px auto 0
+}
+
+.list_how_to__button {
+    font-family: var(--primary-font-family);
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 44px;
+    margin: 16px auto 0 auto;
+    padding: 10px 30px;
+    text-align: center;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 44px;
+    background: #3CB371
+}
+
+.list_how_to__button:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #3CA36A
+}
+
+@media screen and (max-width: 991px) {
+    .list_how_to {
+        margin-bottom:24px
+    }
+
+    .list_how_to__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+        padding-bottom: 15px
+    }
+
+    .list_how_to__description {
+        margin-bottom: 12px
+    }
+
+    .list_how_to__list_wrapper {
+        padding: 16px
+    }
+
+    .list_how_to__item {
+        padding-left: 46px!important
+    }
+
+    .list_how_to__item_title {
+        font-size: 18px
+    }
+
+    .list_how_to__button {
+        padding: 10px 58px
+    }
+}

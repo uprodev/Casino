@@ -1,0 +1,22 @@
+.mega_menu__item_submenu-trigger {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.566.597a.714.714 0 0 1 .786.124l2.468 2.29a1 1 0 0 0 1.36 0L7.65.721a.714.714 0 1 1 .97 1.047L5.18 4.96a1 1 0 0 1-1.36 0L.38 1.769A.714.714 0 0 1 .567.596Z' fill='%23fff'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    height: 51px;
+    right: 0;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    width: 51px;
+    background-color: rgba(#fff ,0.1);
+
+    @media (min-width: $mq-lg) {
+        display: none;
+    }
+
+    &.active {
+        background-color: rgba(#1CB48F, 0.6);
+        transform: scaleY(-1);
+    }
+}

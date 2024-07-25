@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css
+" rel="stylesheet">
+	<style>
+		.page-loaded .page-loader {
+			display: none;
+		}
+
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 100;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			color: #6c3c87;
+		}
+
+		.lds-roller,
+		.lds-roller div,
+		.lds-roller div:after {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.lds-roller {
+			display: inline-block;
+			position: relative;
+			width: 80px;
+			height: 80px;
+		}
+
+		.lds-roller div {
+			-webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			-webkit-transform-origin: 40px 40px;
+			-ms-transform-origin: 40px 40px;
+			transform-origin: 40px 40px;
+		}
+
+		.lds-roller div:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			width: 7.2px;
+			height: 7.2px;
+			border-radius: 50%;
+			background: currentColor;
+			margin: -3.6px 0 0 -3.6px;
+		}
+
+		.lds-roller div:nth-child(1) {
+			-webkit-animation-delay: -0.036s;
+			animation-delay: -0.036s;
+		}
+
+		.lds-roller div:nth-child(1):after {
+			top: 62.62742px;
+			left: 62.62742px;
+		}
+
+		.lds-roller div:nth-child(2) {
+			-webkit-animation-delay: -0.072s;
+			animation-delay: -0.072s;
+		}
+
+		.lds-roller div:nth-child(2):after {
+			top: 67.71281px;
+			left: 56px;
+		}
+
+		.lds-roller div:nth-child(3) {
+			-webkit-animation-delay: -0.108s;
+			animation-delay: -0.108s;
+		}
+
+		.lds-roller div:nth-child(3):after {
+			top: 70.90963px;
+			left: 48.28221px;
+		}
+
+		.lds-roller div:nth-child(4) {
+			-webkit-animation-delay: -0.144s;
+			animation-delay: -0.144s;
+		}
+
+		.lds-roller div:nth-child(4):after {
+			top: 72px;
+			left: 40px;
+		}
+
+		.lds-roller div:nth-child(5) {
+			-webkit-animation-delay: -0.18s;
+			animation-delay: -0.18s;
+		}
+
+		.lds-roller div:nth-child(5):after {
+			top: 70.90963px;
+			left: 31.71779px;
+		}
+
+		.lds-roller div:nth-child(6) {
+			-webkit-animation-delay: -0.216s;
+			animation-delay: -0.216s;
+		}
+
+		.lds-roller div:nth-child(6):after {
+			top: 67.71281px;
+			left: 24px;
+		}
+
+		.lds-roller div:nth-child(7) {
+			-webkit-animation-delay: -0.252s;
+			animation-delay: -0.252s;
+		}
+
+		.lds-roller div:nth-child(7):after {
+			top: 62.62742px;
+			left: 17.37258px;
+		}
+
+		.lds-roller div:nth-child(8) {
+			-webkit-animation-delay: -0.288s;
+			animation-delay: -0.288s;
+		}
+
+		.lds-roller div:nth-child(8):after {
+			top: 56px;
+			left: 12.28719px;
+		}
+
+		@-webkit-keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@media print {
+
+			header,
+			footer {
+				display: none;
+			}
+		}
+	</style>
+
+	
+<script src="assets/js/vendors.js"></script>
+<script src="assets/js/app.js"></script>
+
+</head>
+
+<body class="page">
+    <div class="page-loader">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+    <header class="header__wrapper not_to_divide">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="No KYC">
+            </a>
+        </div>
+
+        <div class="header__mega_menu">
+            <div class="mega_menu__mobile_toggle" data-action="toggle-show-hide-mega-menu"></div>
+            <ul class="mega_menu__list" data-mega-menu >
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        No KYC
+                        Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Crypto Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">Lorem ipsum dolor sit.</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Betting
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 4</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__side">
+            <div class="site_search__btn" data-action="show-main-search">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.5 16C10.275 15.9996 11.9988 15.4054 13.397 14.312L17.793 18.708L19.207 17.294L14.811 12.898C15.905 11.4997 16.4996 9.77544 16.5 8C16.5 3.589 12.911 0 8.5 0C4.089 0 0.5 3.589 0.5 8C0.5 12.411 4.089 16 8.5 16ZM8.5 2C11.809 2 14.5 4.691 14.5 8C14.5 11.309 11.809 14 8.5 14C5.191 14 2.5 11.309 2.5 8C2.5 4.691 5.191 2 8.5 2Z"
+                        fill="white"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="site_search" data-main-search >
+        <div class="site_search__inner">
+            <div class="site_search__title">Suche nokyc.com</div>
+            <div class="site_search__close" data-action="hide-main-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                    <path
+                        d="M8.66522 6.49999L13.2724 1.90357C13.4741 1.70181 13.5875 1.42818 13.5875 1.14285C13.5875 0.857529 13.4741 0.583892 13.2724 0.382138C13.0706 0.180384 12.797 0.0670395 12.5117 0.0670395C12.2263 0.0670395 11.9527 0.180384 11.7509 0.382138L7.15451 4.98928L2.55808 0.382138C2.35633 0.180384 2.08269 0.0670395 1.79737 0.0670395C1.51204 0.0670395 1.23841 0.180384 1.03665 0.382138C0.834899 0.583892 0.721555 0.857529 0.721555 1.14285C0.721555 1.42818 0.834899 1.70181 1.03665 1.90357L5.6438 6.49999L1.03665 11.0964C0.93623 11.196 0.856522 11.3145 0.802127 11.4451C0.747732 11.5757 0.719727 11.7157 0.719727 11.8571C0.719727 11.9986 0.747732 12.1386 0.802127 12.2692C0.856522 12.3997 0.93623 12.5182 1.03665 12.6179C1.13626 12.7183 1.25476 12.798 1.38532 12.8524C1.51588 12.9068 1.65593 12.9348 1.79737 12.9348C1.93881 12.9348 2.07885 12.9068 2.20941 12.8524C2.33998 12.798 2.45848 12.7183 2.55808 12.6179L7.15451 8.01071L11.7509 12.6179C11.8505 12.7183 11.969 12.798 12.0996 12.8524C12.2302 12.9068 12.3702 12.9348 12.5117 12.9348C12.6531 12.9348 12.7931 12.9068 12.9237 12.8524C13.0543 12.798 13.1728 12.7183 13.2724 12.6179C13.3728 12.5182 13.4525 12.3997 13.5069 12.2692C13.5613 12.1386 13.5893 11.9986 13.5893 11.8571C13.5893 11.7157 13.5613 11.5757 13.5069 11.4451C13.4525 11.3145 13.3728 11.196 13.2724 11.0964L8.66522 6.49999Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <form class="site_search__form" role="search" method="get" action="">
+                <input class="site_search__input" type="text" value=""
+                    placeholder="300+ Gratiswetten, Bewertungen &amp; Promo-Codes" name="s">
+                <input style="background-image: url(assets/icons/search-img.svg);" class="site_search__submit" type="submit" value="" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</header>
+
+    <main id="app">
+        <div class="col-12 home-banner has_hero">
+            <div class="container">
+                <section class="hero hero__wrapper">
+                    <div class="hero__body">
+                        <div class="hero__title__wrapper ">
+                            <div class="mob_h1_wrapper">
+                                <h1 class="hero__title">
+                                    10+ Best No KYC Casinos 2024 – Compare The Top No Verification Casinos
+                                </h1>
+
+                            </div>
+                            <div class="hero__image_mobile" style="display: none;">
+                                <img width="121" height="92" src="https://nokyc.com/wp-content/uploads/2023/12/m-2.svg">
+                            </div>
+                        </div>
+                        <div class="hero__desc">
+                            No KYC casinos is the excellent combination of the thrill of the game and the assurance of
+                            complete anonymity. No ID verification casinos are revolutionizing the gambling industry,
+                            offering players a seamless and private gaming experience without the hassle of extensive
+                            identification checks. Whether you're a seasoned gambler or a newcomer, anonymous casinos
+                            provide a unique opportunity to enjoy your favorite games without compromising your personal
+                            information. In this comprehensive guide, we'll explore the top no KYC casinos, their
+                            benefits, and how they ensure a secure, anonymous, and exhilarating gaming experience.
+                        </div>
+                        <div class="hero__tiles__wrapper">
+                        </div>
+                        <a class="hero__trust" href="#why-trust">
+                            <div class="hero__trust__icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="background"
+                                        d="M16.4606 0.505371H3.54042C2.7351 0.507596 1.96337 0.82835 1.39372 1.3976C0.824074 1.96685 0.502784 2.73836 0.5 3.54368V16.4565C0.502784 17.2618 0.824074 18.0333 1.39372 18.6026C1.96337 19.1718 2.7351 19.4926 3.54042 19.4948H16.4606C17.2658 19.4923 18.0372 19.1714 18.6067 18.6022C19.1761 18.033 19.4972 17.2616 19.5 16.4565V3.54368C19.4972 2.73873 19.1762 1.96754 18.607 1.39834C18.0378 0.829151 17.2666 0.508152 16.4617 0.505371L16.4606 0.505371Z">
+                                    </path>
+                                    <path
+                                        d="M16.4606 0.505371H3.54042C2.7351 0.507596 1.96337 0.82835 1.39372 1.3976C0.824074 1.96685 0.502784 2.73836 0.5 3.54368V16.4565C0.502784 17.2618 0.824074 18.0333 1.39372 18.6026C1.96337 19.1718 2.7351 19.4926 3.54042 19.4948H16.4606C17.2658 19.4923 18.0372 19.1714 18.6067 18.6022C19.1761 18.033 19.4972 17.2616 19.5 16.4565V3.54368C19.4972 2.73873 19.1762 1.96754 18.607 1.39834C18.0378 0.829151 17.2666 0.508152 16.4617 0.505371L16.4606 0.505371ZM18.3596 16.4565C18.3596 17.5009 17.5051 18.3554 16.4606 18.3554H3.54042C2.496 18.3554 1.64042 17.5009 1.64042 16.4565V3.54368C1.64042 2.49926 2.49495 1.64474 3.53937 1.64474H16.4617C17.5061 1.64474 18.3606 2.49926 18.3606 3.54368V16.4565H18.3596Z"
+                                        fill="#fff"></path>
+                                    <path class="word"
+                                        d="M11.8815 15.0893H8.13847C8.12089 15.0897 8.10342 15.0866 8.08709 15.0801C8.07077 15.0735 8.05594 15.0638 8.04351 15.0513C8.03108 15.0389 8.0213 15.0241 8.01478 15.0078C8.00825 14.9914 8.00511 14.974 8.00554 14.9564V8.57593C8.00568 8.55345 8.00136 8.53116 7.99282 8.51037C7.98428 8.48957 7.9717 8.47067 7.9558 8.45477C7.9399 8.43887 7.92101 8.42629 7.90021 8.41775C7.87941 8.40921 7.85712 8.40489 7.83464 8.40503H4.49039C4.47281 8.40546 4.45533 8.40232 4.43901 8.39579C4.42269 8.38927 4.40786 8.37949 4.39543 8.36706C4.383 8.35463 4.37322 8.3398 4.3667 8.32348C4.36017 8.30716 4.35703 8.28968 4.35746 8.2721V4.98693C4.35746 4.91097 4.41443 4.854 4.49039 4.854H15.5106C15.5865 4.854 15.6435 4.91097 15.6435 4.98693V8.29109C15.644 8.30867 15.6408 8.32615 15.6343 8.34247C15.6278 8.35879 15.618 8.37362 15.6056 8.38605C15.5931 8.39848 15.5783 8.40826 15.562 8.41478C15.5456 8.42131 15.5282 8.42445 15.5106 8.42402H12.1474C12.1298 8.42358 12.1123 8.42672 12.096 8.43325C12.0797 8.43978 12.0648 8.44955 12.0524 8.46198C12.04 8.47441 12.0302 8.48924 12.0237 8.50557C12.0171 8.52189 12.014 8.53937 12.0144 8.55694V14.9564C12.0149 14.974 12.0117 14.9914 12.0052 15.0078C11.9987 15.0241 11.9889 15.0389 11.9765 15.0513C11.964 15.0638 11.9492 15.0735 11.9329 15.0801C11.9166 15.0866 11.8991 15.0897 11.8815 15.0893V15.0893Z"
+                                        fill="#fff"></path>
+                                </svg>
+                            </div>
+                            <div class="hero__trust__question">
+                                Why trust NoKYC.com?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hero__image">
+                        <img width="515" height="436" src="https://nokyc.com/wp-content/uploads/2023/12/uk.svg">
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="author_section__wrapper">
+                <div class="author_section__avatar_and_meta">
+                    <a class="author_section__avatar" href="#">
+                        <img src="https://nokyc.com/wp-content/uploads/2023/12/philip-150x150.jpg" alt="">
+                    </a>
+                    <div class="author_section__meta">
+                        <a class="author_section__name" href="#">
+                            Philip
+                        </a>
+                        <div class="author_section__job_and_fact_checked">
+                            <div class="author_section__label__wrapper">
+                                <div class="author_section__label_icon">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_8510_29570)">
+                                            <path
+                                                d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                fill=""></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8510_29570">
+                                                <rect width="10" height="10" fill="white" transform="translate(0 0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="author_section__label">
+                                    Editor-in-Chief
+                                </div>
+                            </div>
+                        </div>
+                        <div class="author_section__date">
+                            Updated: <span>12 July 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="author_section__extra">
+                    <div class="btn_with_tooltip disclaimer">
+                        <div class="btn_with_tooltip__btn">
+                            Disclosure</div>
+                        <div class="btn_with_tooltip__tip">
+                            We sometimes use affiliate links in our content, when
+                            clicking on those we might receive a commission - at no extra cost to you. By using this
+                            website you agree to our terms and conditions and privacy policy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><span id="toc_section_heading_0">Best No KYC Casinos 2024</span></h2>
+            <div class="campaign-compact-table__wrapper">
+
+                <table class="campaign-compact-table do-not-wrap">
+                    <tbody class="campaign-compact-table__offers-wrapper ">
+                        <tr class="campaign-compact-table__offer brand_table_custom_cl">
+
+                            <td class="campaign-compact-table__offer-logo">
+                                <a href="#" target="_blank" rel="nofollow sponsored">
+                                    <img src="https://nokyc.com/wp-content/uploads/2023/12/tg-casino-1.svg"
+                                        alt="TG.Casino Logo">
+                                    <p class="campaign-compact-table__offer-brand-name">TG.Casino</p>
+                                </a>
+
+                            </td>
+                            <td class="campaign-compact-table__offer-description">
+                                <p>200% Deposit Bonus Up To 10 ETH</p>
+                            </td>
+                            <td class="campaign-compact-table__offer-key-features">
+                                <div class="campaign-compact-table__offer-description">
+                                    <p>200% Deposit Bonus Up To 10 ETH</p>
+                                </div>
+
+                                <ul class="">
+                                    <li class="principales-list-item">
+
+                                        #1 Licensed
+                                        Telegram Casino
+                                    </li>
+                                    <li class="principales-list-item">No KYC
+                                        Requirements</li>
+                                    <li class="principales-list-item">Completely
+                                        Anonymous Gambling</li>
+                                </ul>
+                            </td>
+                            <td class="campaign-compact-table__offer-rating">
+                                <div class="campaign-compact-table__offer-rating-text">
+                                    9.9
+                                </div>
+                                <div class="stars-rating">
+                                    <div data-stars="" data-stars-value="9.9" class="stars">
+    <input type="text" value="9.9" >
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </td>
+                            <td class="campaign-compact-table__offer-cta-button">
+                                <a href="#" target="_blank" rel="nofollow sponsored">
+                                    Play Now
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="campaign-compact-table__offer">
+
+                            <td class="campaign-compact-table__offer-logo">
+                                <a href="#" target="_blank" rel="nofollow sponsored">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/05/WSM-New.svg"
+                                        alt="TG.Casino Logo">
+                                    <p class="campaign-compact-table__offer-brand-name">TG.Casino</p>
+                                </a>
+
+                            </td>
+                            <td class="campaign-compact-table__offer-description">
+                                <p>200% Deposit Bonus Up To 10 ETH</p>
+                            </td>
+                            <td class="campaign-compact-table__offer-key-features">
+                                <div class="campaign-compact-table__offer-description">
+                                    <p>200% Deposit Bonus Up To 10 ETH</p>
+                                </div>
+
+                                <ul class="">
+                                    <li class="principales-list-item">
+
+                                        #1 Licensed
+                                        Telegram Casino
+                                    </li>
+                                    <li class="principales-list-item">No KYC
+                                        Requirements</li>
+                                    <li class="principales-list-item">Completely
+                                        Anonymous Gambling</li>
+                                </ul>
+                            </td>
+                            <td class="campaign-compact-table__offer-rating">
+                                <div class="campaign-compact-table__offer-rating-text">
+                                    9.2
+                                </div>
+                                <div class="stars-rating">
+                                    <div data-stars="" data-stars-value="9.2" class="stars">
+    <input type="text" value="9.2" >
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+    <div class="stars__item">
+        <div class="stars__item-outline-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </div>
+        <div class="stars__item-solid-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </td>
+                            <td class="campaign-compact-table__offer-cta-button">
+                                <a href="#" target="_blank" rel="nofollow sponsored">
+                                    Play Now
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="campaign-shortcode__compare-view require_ajax_loading" style="display: none;">
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="news_guides_section__wrapper">
+            <div class="container">
+                <div class="news_guides_section">
+                    <div class="news_guides_section__news">
+                        <div class="news_guides_section__header title-2 mt-0">
+                            Latest Online Casino News
+                        </div>
+                        <div class="news_guides_section__news_cards">
+                            <a class="news_guides_section__news_card" href="#">
+                                <div class="news_guides_section__news_thumbnail">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/07/florian-olivo-Mf23RF8xArY-unsplash.jpg"
+                                        alt="News Thumbnail">
+                                </div>
+                                <div class="news_guides_section__news_card__author_and_date">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg"
+                                                alt="Vyom Chaud">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Vyom Chaud
+                                        </div>
+                                    </div>
+                                    <div class="news_guides_section__news_card__date">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 7H6.56667C6.56657 7.05694 6.57769 7.11335 6.5994 7.16599C6.62111 7.21864 6.65299 7.26648 6.6932 7.3068L7 7ZM7 12.6333C5.50595 12.6333 4.07309 12.0398 3.01663 10.9834C1.96018 9.92691 1.36667 8.49405 1.36667 7H0.5C0.5 8.72391 1.18482 10.3772 2.40381 11.5962C3.62279 12.8152 5.27609 13.5 7 13.5V12.6333ZM12.6333 7C12.6333 7.73978 12.4876 8.47232 12.2045 9.15578C11.9214 9.83925 11.5065 10.4603 10.9834 10.9834C10.4603 11.5065 9.83925 11.9214 9.15578 12.2045C8.47232 12.4876 7.73978 12.6333 7 12.6333V13.5C8.72391 13.5 10.3772 12.8152 11.5962 11.5962C12.8152 10.3772 13.5 8.72391 13.5 7H12.6333ZM7 1.36667C7.73978 1.36667 8.47232 1.51238 9.15578 1.79548C9.83925 2.07858 10.4603 2.49353 10.9834 3.01663C11.5065 3.53974 11.9214 4.16075 12.2045 4.84422C12.4876 5.52768 12.6333 6.26022 12.6333 7H13.5C13.5 5.27609 12.8152 3.62279 11.5962 2.40381C10.3772 1.18482 8.72391 0.5 7 0.5V1.36667ZM7 0.5C5.27609 0.5 3.62279 1.18482 2.40381 2.40381C1.18482 3.62279 0.5 5.27609 0.5 7H1.36667C1.36667 5.50595 1.96018 4.07309 3.01663 3.01663C4.07309 1.96018 5.50595 1.36667 7 1.36667V0.5ZM6.56667 3.1V7H7.43333V3.1H6.56667ZM6.6932 7.3068L9.2932 9.9068L9.9068 9.2932L7.3068 6.6932L6.6932 7.3068V7.3068Z"
+                                                fill="#888888"></path>
+                                        </svg>
+                                        <span>6 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="news_guides_section__news_card__title">
+                                    The inaugural Esports World Cup boasts a record $62.5 million prize pool
+                                </div>
+                            </a>
+
+                            <a href="#" class="news_guides_section__news_card">
+                                <div class="news_guides_section__news_thumbnail">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/07/markus-winkler-Q6uqw_Hjye8-unsplash.jpg"
+                                        alt="News Thumbnail">
+                                </div>
+                                <div class="news_guides_section__news_card__author_and_date">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg"
+                                                alt="Vyom Chaud">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Vyom Chaud
+                                        </div>
+                                    </div>
+                                    <div class="news_guides_section__news_card__date">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 7H6.56667C6.56657 7.05694 6.57769 7.11335 6.5994 7.16599C6.62111 7.21864 6.65299 7.26648 6.6932 7.3068L7 7ZM7 12.6333C5.50595 12.6333 4.07309 12.0398 3.01663 10.9834C1.96018 9.92691 1.36667 8.49405 1.36667 7H0.5C0.5 8.72391 1.18482 10.3772 2.40381 11.5962C3.62279 12.8152 5.27609 13.5 7 13.5V12.6333ZM12.6333 7C12.6333 7.73978 12.4876 8.47232 12.2045 9.15578C11.9214 9.83925 11.5065 10.4603 10.9834 10.9834C10.4603 11.5065 9.83925 11.9214 9.15578 12.2045C8.47232 12.4876 7.73978 12.6333 7 12.6333V13.5C8.72391 13.5 10.3772 12.8152 11.5962 11.5962C12.8152 10.3772 13.5 8.72391 13.5 7H12.6333ZM7 1.36667C7.73978 1.36667 8.47232 1.51238 9.15578 1.79548C9.83925 2.07858 10.4603 2.49353 10.9834 3.01663C11.5065 3.53974 11.9214 4.16075 12.2045 4.84422C12.4876 5.52768 12.6333 6.26022 12.6333 7H13.5C13.5 5.27609 12.8152 3.62279 11.5962 2.40381C10.3772 1.18482 8.72391 0.5 7 0.5V1.36667ZM7 0.5C5.27609 0.5 3.62279 1.18482 2.40381 2.40381C1.18482 3.62279 0.5 5.27609 0.5 7H1.36667C1.36667 5.50595 1.96018 4.07309 3.01663 3.01663C4.07309 1.96018 5.50595 1.36667 7 1.36667V0.5ZM6.56667 3.1V7H7.43333V3.1H6.56667ZM6.6932 7.3068L9.2932 9.9068L9.9068 9.2932L7.3068 6.6932L6.6932 7.3068V7.3068Z"
+                                                fill="#888888"></path>
+                                        </svg>
+                                        <span>1 week ago</span>
+
+                                    </div>
+                                </div>
+                                <div class="news_guides_section__news_card__title">
+                                    Deposits In Digital Banks To Cross $15 Trillion In 2024
+                                </div>
+                            </a>
+
+                            <a href="#" class="news_guides_section__news_card">
+                                <div class="news_guides_section__news_thumbnail">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/07/steve-johnson-ZPOoDQc8yMw-unsplash-1.jpg"
+                                        alt="News Thumbnail">
+                                </div>
+                                <div class="news_guides_section__news_card__author_and_date">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg"
+                                                alt="Vyom Chaud">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Vyom Chaud
+                                        </div>
+                                    </div>
+                                    <div class="news_guides_section__news_card__date">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 7H6.56667C6.56657 7.05694 6.57769 7.11335 6.5994 7.16599C6.62111 7.21864 6.65299 7.26648 6.6932 7.3068L7 7ZM7 12.6333C5.50595 12.6333 4.07309 12.0398 3.01663 10.9834C1.96018 9.92691 1.36667 8.49405 1.36667 7H0.5C0.5 8.72391 1.18482 10.3772 2.40381 11.5962C3.62279 12.8152 5.27609 13.5 7 13.5V12.6333ZM12.6333 7C12.6333 7.73978 12.4876 8.47232 12.2045 9.15578C11.9214 9.83925 11.5065 10.4603 10.9834 10.9834C10.4603 11.5065 9.83925 11.9214 9.15578 12.2045C8.47232 12.4876 7.73978 12.6333 7 12.6333V13.5C8.72391 13.5 10.3772 12.8152 11.5962 11.5962C12.8152 10.3772 13.5 8.72391 13.5 7H12.6333ZM7 1.36667C7.73978 1.36667 8.47232 1.51238 9.15578 1.79548C9.83925 2.07858 10.4603 2.49353 10.9834 3.01663C11.5065 3.53974 11.9214 4.16075 12.2045 4.84422C12.4876 5.52768 12.6333 6.26022 12.6333 7H13.5C13.5 5.27609 12.8152 3.62279 11.5962 2.40381C10.3772 1.18482 8.72391 0.5 7 0.5V1.36667ZM7 0.5C5.27609 0.5 3.62279 1.18482 2.40381 2.40381C1.18482 3.62279 0.5 5.27609 0.5 7H1.36667C1.36667 5.50595 1.96018 4.07309 3.01663 3.01663C4.07309 1.96018 5.50595 1.36667 7 1.36667V0.5ZM6.56667 3.1V7H7.43333V3.1H6.56667ZM6.6932 7.3068L9.2932 9.9068L9.9068 9.2932L7.3068 6.6932L6.6932 7.3068V7.3068Z"
+                                                fill="#888888"></path>
+                                        </svg>
+                                        <span>2 weeks ago</span>
+                                    </div>
+                                </div>
+                                <div class="news_guides_section__news_card__title">
+                                    Funding in AI startups declined to $42.5 billion in 2023
+                                </div>
+                            </a>
+                        </div>
+
+                        <a class="news_guides_section__more_btn" href="#" aria-label="More News">
+                            <span>More News</span>
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.906594 9.66407H14.3308L12.107 11.9824C11.8589 12.2412 11.8579 12.6616 12.1049 12.9216C12.3519 13.1815 12.7532 13.1825 13.0014 12.9238L16.3135 9.47069C16.3137 9.47049 16.3139 9.47026 16.3141 9.47006C16.5616 9.21134 16.5624 8.78953 16.3141 8.52995C16.3139 8.52975 16.3138 8.52951 16.3136 8.52932L13.0014 5.07619C12.7533 4.81754 12.352 4.81843 12.105 5.07845C11.858 5.3384 11.859 5.75885 12.1071 6.01757L14.3308 8.33594H0.906594C0.556503 8.33594 0.272717 8.63324 0.272717 9C0.272717 9.36676 0.556503 9.66407 0.906594 9.66407Z"
+                                    fill="#1C2642"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="news_guides_section__guides">
+                        <div class="news_guides_section__header title-2 mt-0">
+                            Our Casino Guides
+                        </div>
+                        <div class="news_guides_section__guides_cards">
+                            <a class="news_guides_section__guides_card" href="#">
+                                <div class="news_guides_section__guides_card__title">
+                                    Best Bitcoin &amp; Crypto Poker Sites 2024 — Top Crypto Casino Sites in the U.S.
+                                </div>
+                                <div class="news_guides_section__guides_card__author">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/slika1-150x150.png"
+                                                alt="Emilija Blagojevic">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Emilija Blagojevic
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="news_guides_section__guides_card" href="#">
+                                <div class="news_guides_section__guides_card__title">
+                                    New Bitcoin Casinos for July 2024
+                                </div>
+                                <div class="news_guides_section__guides_card__author">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg"
+                                                alt="Emilija Blagojevic">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Johanna Gullberg
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="news_guides_section__guides_card" href="#">
+                                <div class="news_guides_section__guides_card__title">
+                                    Best Gambling Sites Without Verification in 2024
+                                </div>
+                                <div class="news_guides_section__guides_card__author">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/slika1-150x150.png"
+                                                alt="Emilija Blagojevic">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Emilija Blagojevic
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="news_guides_section__guides_card" href="#">
+                                <div class="news_guides_section__guides_card__title">
+                                    Best No Account Casinos in 2024
+                                </div>
+                                <div class="news_guides_section__guides_card__author">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg"
+                                                alt="Emilija Blagojevic">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Johanna Gullberg
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="news_guides_section__guides_card" href="#">
+                                <div class="news_guides_section__guides_card__title">
+                                    10+ Best No KYC Casinos 2024 - Compare The Top No Verification Casinos
+                                </div>
+                                <div class="news_guides_section__guides_card__author">
+                                    <div class="news_guides_section__news_card__author">
+                                        <div class="news_guides_section__news_card__author_avatar">
+                                            <img src="https://nokyc.com/wp-content/uploads/2023/12/philip-150x150.jpg"
+                                                alt="Emilija Blagojevic">
+                                        </div>
+                                        <div class="news_guides_section__news_card__author_name">
+                                            Philip
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc_section__wrapper">
+            <div class="toc_section container">
+                <div class="toc_section__title title-2 mt-0">
+                    On this page
+                </div>
+                <div class="toc_section__opening_paragraph">
+                    If you don’t have time to read our guide in full, jump to whatever interests you the most through
+                    quick links below:
+                </div>
+                <ul class="toc_section__links">
+
+                    <li>
+                        <a href="#toc_section_heading_3">
+                            No KYC Casinos Reviewed
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#toc_section_heading_4">
+                            What Is a No-KYC Casino?
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#toc_section_heading_5">
+                            Advantages of No KYC Casinos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#toc_section_heading_6">
+                            How Does No ID Verification Work?
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <section class="col-12 pr-0 pl-0 why-trust-section">
+            <div class="container ">
+                <h2><span id="toc_section_heading_1">Why trust No KYC?</span></h2>
+
+                <div class="col-12 pr-0 pl-0 launched-section-inner">
+                    <div class="row">
+                        <div class="col-12 col-md-6 launched-one mob_border">
+                            <div class="summary_text">
+                                Safe Betting Sites is a new UK initiative launched in 2020 to help
+                                protect consumers against unlicensed betting sites.
+                                No KYC is your go-to source for reliable anonymous crypto casinos and sportsbooks. Our
+                                expert researchers and writers are dedicated to bringing you trustworthy, complimentary
+                                guidance. We’re committed to endorsing only secure anonymous gambling sites without KYC
+                                verification that have undergone rigorous evaluation. Moreover, we guarantee the
+                                precision of our content through meticulous verification before publication. The no-ID
+                                online casinos and sportsbooks landscape is vast and complex, but our objective,
+                                forthright, and perceptive reviews and guides aim to deliver meaningful insights to our
+                                worldwide readers.
+                            </div>
+                            <ul>
+                                <li class="todo-guide-shortcode_item">Unbiased KYC-free casino reviews made by skilled
+                                    experts</li>
+                                <li class="todo-guide-shortcode_item">The highlighted no-KYC casinos are fully licensed
+                                    and secure</li>
+                                <li class="todo-guide-shortcode_item">In-depth anonymous crypto casino guides</li>
+                            </ul>
+                            <div class="about_button_mob"><a class="about-button" href="#">About SafeBettingSites</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 launched-one launched-two">
+                            <div class="col-12 launched-logo">
+                                <img class="why_trust_image_logo"
+                                    src="https://nokyc.com/wp-content/uploads/2023/12/trust.svg" alt="">
+                                <br>
+                                <img class="why_trust_image_logo2"
+                                    src="https://nokyc.com/wp-content/uploads/2023/12/trustby.svg" alt="">
+                            </div>
+                            <div class="col-12 comparison-section">
+                                <div class="row">
+                                    <div class="authors_group_block__wrapper">
+                                        <a class="authors_group_block__author" href="#" style="z-index: 6;">
+                                            <img src="https://nokyc.com/wp-content/uploads/2023/12/philip-150x150.jpg"
+                                                alt="">
+                                        </a>
+                                        <a class="authors_group_block__author" href="#" style="z-index: 5;">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/thumbnail_IMG_0085-150x150.jpg"
+                                                alt="">
+                                        </a>
+                                        <a class="authors_group_block__author" href="#" style="z-index: 4;">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg"
+                                                alt="">
+                                        </a>
+                                        <a class="authors_group_block__author" href="#" style="z-index: 3;">
+                                            <img src="https://nokyc.com/wp-content/uploads/2024/02/my-face-150x150.jpg"
+                                                alt="">
+                                        </a>
+
+                                        <div class="authors_group_block__green_tick">
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.5" y="0.487427" width="24" height="24" rx="12"
+                                                    fill="#AFF2CD"></rect>
+                                                <g clip-path="url(#clip0_7200_250294)">
+                                                    <path
+                                                        d="M16.2017 8.71643L11.0887 13.8029L8.63308 11.3491L7.5 12.4821L11.2763 16.2585L17.5 10.0147L16.2017 8.71643Z"
+                                                        fill="#014C6B"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_7200_250294">
+                                                        <rect width="10" height="10" fill="white"
+                                                            transform="translate(7.5 7.48743)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="motto-text">Fighting Your Corner, Making Gambling Safer.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container text-content">
+            <h2><span id="toc_section_heading_2">Best No KYC Crypto Casino Sites</span></h2>
+            <ol>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>TG.Casino</strong>
+                    </a>
+                    – The #1 No KYC Casino on Telegram
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>
+                            Lucky
+                            Block
+                        </strong>
+                    </a>
+                    – Anonymous Casino with Only Cryptocurrencies Available
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>Mega Dice</strong>
+                    </a>
+                    – Excellent No KYC Casino Option
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>
+                            Wall
+                            Street Memes Casino
+                        </strong>
+                    </a>
+                    – Best No ID Verification Casino With Highly Valued Native Token
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>CoinPoker</strong>
+                    </a>
+                    – Decentralized No KYC Poker
+                    Platform with A Lucrative Crypto Welcome Offer
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>BC.Game</strong>
+                    </a> –
+                    Best No KYC Casino for Local Payment Options
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>BetPanda</strong>
+                    </a>
+                    – No ID Verification Casino with Best Bonus Offering
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>Vave</strong>
+                    </a>
+                    – No KYC Casino with Excellent Game Offering
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>BetPlay</strong>
+                    </a>
+                    – No KYC Casino with Great Security
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <strong>Flush</strong>
+                    </a>
+                    – No Verification Casino with Top-Notch Live Casino Games
+                </li>
+            </ol>
+
+            <h2><span id="toc_section_heading_3">No KYC Casinos Reviewed</span></h2>
+
+            <p>Below we’ll review each of the casinos which have made it into our shortlist of no verification casinos.
+            </p>
+
+            <h3>1. TG.Casino – The Best No KYC Casino 2024</h3>
+
+            <p>
+                Kicking off our list of the best no KYC crypto casino sites is TG.Casino, which describes itself as more
+                than just a casino but a full-fledged ecosystem that constantly rewards players. TG.Casino uses its
+                token, $TGC, and the popular messaging software program Telegram to provide users with a completely
+                anonymous experience, making it an attractive platform for those interested in this type of online
+                wagering. Telegram allows players to sign up only with their phone number and uses artificial
+                intelligence bots to make payments easy, allowing it to adapt to the times.
+            </p>
+
+            <div class="aligncenter">
+                <a href="https://nokyc.com/wp-content/uploads/2024/02/TG.Casino-2.jpg" data-fancybox>
+                    <img src="https://nokyc.com/wp-content/uploads/2024/02/TG.Casino-2.jpg" alt="">
+                </a>
+            </div>
+
+            <p>Some of the key benefits of using this payment platform include:</p>
+
+            <ul class="su-list">
+                <li>
+                    Anonymous deposits and withdrawals
+                </li>
+                <li>Zero fees</li>
+                <li>No payment limits</li>
+                <li>List item</li>
+                <li>A low minimum transfer amount of just $1</li>
+            </ul>
+
+            <p>To get started, all you need to do is <a href="#">purchase $TGC</a>, which is currently available via
+                exclusive presale.
+                The token will officially launch when it reaches $5 million in presales. Until then, the price per $TGC
+                will increase by $0.125 every seven days. This gives early buyers special advantages such as staking
+                rewards and access to TG. Casino’s profit-sharing system.</p>
+            <p>Joining this casino grants you a 200% welcome bonus of up to ten Ethereum. If you play games using $TGC
+                tokens, you’ll receive 25% cashback weekly on all losses. TG.Casino utilizes a stake-and-burn concept to
+                keep its tokens scarce and valuable. Sixty percent of the purchased tokens will go back to those with
+                staking income, while the remaining 40% will go to a burn address that causes the value to increase.</p>
+            <p>You’re in luck if you want privacy-focused gaming. TG.Casino is open to players worldwide even though
+                it’s licensed in Curacao. You can play thousands of slot games, as well as live dealer games and sports
+                books, through Telegram.</p>
+            <h4>TG.Casino Pros and Cons</h4>
+            <p>The advantages of TG.Casino are extensive. Players can benefit from its unique profit-sharing program and
+                enjoy cashback and welcome bonuses. In addition, the site has an impressive annualized percentage yield
+                of 270%, which it will use to buy back some tokens and give them to players with staking while burning
+                the remainder to keep the value of $TGC high.</p>
+            <p>The main drawback of this site is that its token is still in the presale phase. However, this
+                limited-time offer lets users purchase tokens at a much lower price before it officially launches.</p>
+
+            <div class="su-button-center">
+                <a href="#" class="su-button su-button-style-3d" target="_blank">
+                    <span>Visit
+                        TG.Casino
+                    </span>
+                </a>
+            </div>
+
+            <p>&nbsp;</p>
+            <div class="su-note">
+                <div class="su-note-inner su-u-clearfix su-u-trim" style="">
+                    <h2><span id="toc_section_heading_4">What Is a No-KYC Casino?</span></h2>
+                    <p>Are you still unfamiliar with the topic and want to know more about no-KYC casinos? Let’s dive
+                        into what they are exactly. The term KYC in crypto and banking stands for “Know Your Customer.”
+                        It refers to the procedures financial institutions need to follow to verify a person’s identity
+                        before they can perform any type of banking activity.</p>
+                    <p>Institutions have KYC policies in place as a precaution. These policies protect them from the
+                        legal and financial consequences of fraud, corruption, and money laundering. However, people who
+                        gamble online through crypto casinos prefer to keep their activity private. In this case, no-KYC
+                        casinos exist so users don’t have to give up any of their personal information.</p>
+                    <p>Most will only require minimal details, such as a phone number or email address. You can
+                        typically create an account with the casino by entering this information and creating a unique
+                        username and password. You’ll be able to gamble anonymously and keep the following sensitive
+                        information private:
+                    </p>
+                    <ul class="su-list">
+                        <li>
+                            Name
+                        </li>
+                        <li>
+                            Address
+                        </li>
+                        <li>
+                            Banking or credit card information
+                        </li>
+                        <li>
+                            Utility bill
+                        </li>
+                    </ul>
+                    <p>Keep in mind that some crypto casinos have no-KYC protocols in place to deposit money and start
+                        gambling, though they will need to verify your identity before withdrawal. It also depends on
+                        the payment method you choose with some KYC-free casinos. For example, Lucky Block is a no-KYC
+                        casino only when you use an accepted cryptocurrency for deposits and withdrawals. The site
+                        accepts fiat money as payment, but if you elect for this currency, Lucky Block does need to
+                        verify your identity.</p>
+                </div>
+            </div>
+
+            <p>&nbsp;</p>
+            <h2><span id="toc_section_heading_8">Comparing Bonuses at The Best No KYC Casinos</span></h2>
+            <p>
+                To make things easier for you, we’ve collected all the most important data
+                concerning welcome bonuses at the best no KYC casinos. The table below provides immediate access to
+                what you need to know.
+            </p>
+            <p></p>
+
+            <div class="su-table su-table-alternate">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><b>Casino</b></td>
+                            <td><b>Bonus</b></td>
+                            <td><b>Promo Code</b></td>
+                            <td><b>Payout Speed</b></td>
+                            <td><b>Minimum Deposit</b></td>
+                            <td><b>Max Withdrawal</b></td>
+                            <td><b>Expiry Date</b></td>
+                            <td><b>Limits</b></td>
+                        </tr>
+                        <tr>
+                            <td><span>TG.Casino</span></td>
+                            <td><span>200% up to 10 ETH + 50 Free Spins</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$25</span></td>
+                            <td><span>$500,000</span></td>
+                            <td><span>14 days</span></td>
+                            <td><span>Wagering Contributions for Slots: 100%,</span>
+                                <p></p>
+                                <p><span>Roulette (inc. live): 5%, all other games: 20%</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>Lucky Block</span></td>
+                            <td><span>200% up to $25,000 + 50 Free Spins</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$20</span></td>
+                            <td><span>$500,000</span></td>
+                            <td><span>30 days</span></td>
+                            <td><span>Free Spins eligible only on Wanted Dead or a Wild</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>Mega Dice</span></td>
+                            <td><span>200% up to 1 BTC + 50 Free Spins</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>24 hours</span></td>
+                            <td><span>$20</span></td>
+                            <td><span>$50,000</span></td>
+                            <td><span>30 days</span></td>
+                            <td><span>Free Spins eligible only on Wanted Dead or a Wild</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>WSM Casino</span></td>
+                            <td><span>200% up to $25,000 + 50 Free Spins</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$10</span></td>
+                            <td><span>$500,000</span></td>
+                            <td><span>14 days</span></td>
+                            <td><span>Dice Games are not eligible</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>CoinPoker</span></td>
+                            <td><span>150% deposit bonus up to $2,000</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$10</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>Bonus is released in 10% increments as you generate
+                                    rake</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>BC.Game</span></td>
+                            <td><span>Up to 360% bonus on your first four deposits</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$10</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>Deposit within 7 minutes of registration to get 300%
+                                    bonus match</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>BetPanda</span></td>
+                            <td><span>100% up to 1 BTC</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$5</span></td>
+                            <td><span>$5,000</span></td>
+                            <td><span>7 days</span></td>
+                            <td><span>N/A</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Wild.io</span></td>
+                            <td><span>400% Bonus up to $10,000 + 300 Free Spins</span></td>
+                            <td><span>WILD</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$20</span></td>
+                            <td><span>$15,000</span></td>
+                            <td><span>7 days</span></td>
+                            <td><span>Free spins are added in 5 sets</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Cryptorino</span></td>
+                            <td><span>100% up to $50,000 + 50 Free Spins</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>$5</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>7 days</span></td>
+                            <td><span>Max turnover per betting round equals $10</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Metaspins</span></td>
+                            <td><span>100% up to 1 BTC</span></td>
+                            <td><span>None needed</span></td>
+                            <td><span>Instant</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>N/A</span></td>
+                            <td><span>7 days</span></td>
+                            <td><span>Max bet is $5 per spin</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>&nbsp;</p>
+
+            <h2>How To Use Crypto In Anonymous Casinos</h2>
+            <p>
+                No matter if you’ve got years of gambling experience or if you are
+                completely new to the world of bets, odds, and payouts, here is a guide with all the essential steps
+                for how to gamble with cryptocurrencies.
+            </p>
+            <div class="list_how_to" id="how-to-how-to-use-crypto-in-anonymous-casinos">
+                <div class="list_how_to__list_wrapper">
+                    <ol class="list_how_to__list">
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Choose The Right Anonymous Crypto Casino with No KYC
+                            </h3>
+                            <div class="list_how_to__item_text">Picking the right gambling platform is the Alpha and the
+                                Omega. Make sure you choose reputable no KYC crypto casinos that accept your preferred
+                                type of cryptocurrency. The right casino will offer a wide range of games, top-notch
+                                customer support, and fast, secure monetary transactions.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Set Up Your Crypto Wallet</h3>
+                            <div class="list_how_to__item_text">You’ll need a digital wallet for your cryptocurrency
+                                transaction to start playing your favorite casino games with crypto. Bitcoin is by far
+                                the most popular and widely accepted crypto, but there are also <a href="#">casinos
+                                    accepting Ethereum</a>,
+                                Litecoin, and others. Ensure your digital wallet is secure, and you know how to send and
+                                receive funds.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Make Deposits</h3>
+                            <div class="list_how_to__item_text">Once you’ve decided which Bitcoin casino with no KYC
+                                verification you want to play at, it’s time to make a deposit. Head over to the casino’s
+                                deposit section, choose the cryptocurrency option, and follow the instructions to
+                                transfer money from your wallet to your casino account. This process is entirely
+                                anonymous and requires no personal information exchange, which is the essential beauty
+                                of no KYC casinos.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Enjoy the Games</h3>
+                            <div class="list_how_to__item_text">Once the funds are in, you’re ready to start gambling. A
+                                no KYC <a href="#">Bitcoin casino</a> worth its name
+                                will offer a full spectrum of gambling experiences – table games, slots, live dealer
+                                games, and much more. Using crypto instead of traditional online casino payment options
+                                grants you an anonymous gambling experience as well as lower transaction fees and faster
+                                withdrawal times.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Withdraw Your Winnings</h3>
+                            <div class="list_how_to__item_text">Ready to enjoy the fruits of your luck and skill?
+                                Withdrawing money from a crypto casino with no KYC protocols is straightforward. Make a
+                                withdrawal request from your crypto wallet and enjoy fast processing times. The lack of
+                                KYC procedures means you won’t undergo tedious verification processes to get a hold of
+                                your winnings.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Stay Safe and Responsible</h3>
+                            <div class="list_how_to__item_text">Responsible gambling is crucial, and gambling with
+                                cryptocurrencies is no exception. Set time and spending limits for yourself, and stick
+                                to them. It’s also important to know that the value of cryptocurrencies fluctuates
+                                massively, so stay up to date with the market to make the most of your funds.</div>
+                        </li>
+                        <li class="list_how_to__item">
+                            <h3 class="list_how_to__item_title">Embrace the Future of Gambling</h3>
+                            <div class="list_how_to__item_text">With crypto, gambling has never been easier! With the
+                                proper knowledge and tools, you’re set to explore this innovative and thrilling way to
+                                gamble while enjoying the benefits of using cryptocurrencies – anonymity, security, and
+                                speed.</div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2><span id="toc_section_heading_12">How No KYC Casinos Work with Crypto</span></h2>
+            <p>Online casino legislation concerns fiat currencies and demands gambling operators to adhere to stringent
+                KYC protocols. However, there is no such legislation related to gambling with crypto.</p>
+            <p>Only two countries in the world define cryptocurrencies as legal and regulated currencies: El Salvador
+                and the Central African Republic. This reality places cryptocurrencies in a legal grey area when it
+                comes to gambling exchange. No KYC casinos use this legal loophole to allow gamblers to play with crypto
+                and thereby circumvent traditional gambling regulations. An online casino that doesn’t demand KYC checks
+                is, per definition, a no KYC crypto casino, free to run things as it wishes.</p>
+            <p>Your main benefit is that when you gamble at a crypto casino with no KYC protocols, you remain completely
+                anonymous. No KYC crypto casinos will usually only ask you for three things:</p>
+
+            <ul class="su-list">
+                <li>
+                    <strong>An email address</strong>
+                </li>
+                <li>
+                    <strong>A username</strong>
+                </li>
+                <li>
+                    <strong>A password</strong>
+                </li>
+            </ul>
+            <p>Once you’ve created your account, you can choose among the best crypto casinos with no KYC requirements
+                for your gambling activities. To find the best no KYC crypto casino in the USA, we suggest you check out
+                our top list. We’ve scoured the market in detail and carefully selected the best and safest options to
+                maximize your crypto gambling experience.</p>
+
+            <div class="su-table su-table-responsive su-table-alternate">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Casino</strong></td>
+                            <td><strong>Accepted Coins</strong></td>
+                        </tr>
+                        <tr>
+                            <td>TG.Casino</td>
+                            <td>Bitcoin, Ethereum, Tether, Dogecoin, Litecoin, Binance Coin, Tron, Ripple, Cardano,
+                                Solana, and USD Coin</td>
+                        </tr>
+                        <tr>
+                            <td>Lucky Block</td>
+                            <td>Bitcoin, Ethereum, Litecoin, Dogecoin, Cardano, Tether, Ripple, Tron, Solana, HShare,
+                                Binance Coin, Bitcoin Cash, USD Coin, and Shiba Inu</td>
+                        </tr>
+                        <tr>
+                            <td>Mega Dice</td>
+                            <td>Bitcoin, Bitcoin Cash, Litecoin, Dogecoin, Ethereum, Tron, Ripple, Cardano, and Solana
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>WSM Casino</td>
+                            <td>Bitcoin, Ethereum, Bitcoin Cash, Tether, Litecoin, Dogecoin, Tron, Ripple, Cardano,
+                                Solana, Binance, and USD Coin</td>
+                        </tr>
+                        <tr>
+                            <td>CoinPoker</td>
+                            <td>Bitcoin, Ethereum, Polygon, Solana, Tether, and Tron</td>
+                        </tr>
+                        <tr>
+                            <td>BC.GAME</td>
+                            <td>Bitcoin, Ethereum, Dogecoin, Ripple, Cardano, Polkadot, Tron, Binance, Avalanche,
+                                Solana, Polygon, Arbitrum, Optimism, Cronos, Fantom, Thorchain, Cosmos, and Near</td>
+                        </tr>
+                        <tr>
+                            <td>Betpanda</td>
+                            <td>Bitcoin, Ethereum, Ripple, Litecoin, Tether, Tron, Binance Coin, Dogecoin, Shiba Inu,
+                                and Sandbox</td>
+                        </tr>
+                        <tr>
+                            <td>Wild.io</td>
+                            <td>Bitcoin, Ethereum, Litecoin, Dogecoin, Bitcoin Cash, Ripple, Cardano, Tether, and Tron
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cryptorino</td>
+                            <td>Bitcoin, Ethereum, Litecoin, Binance Coin, Tether, USD Coin, Ripple, Dogecoin, and Tron
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Metaspins</td>
+                            <td>Bitcoin, Ethereum, Bitcoin Cash, Binance Coin, Cardano, Dogecoin, Litecoin, Tether,
+                                Tron, and USD Coin</td>
+                        </tr>
+                        <tr>
+                            <td>VAVE</td>
+                            <td>Bitcoin, Ethereum, Bitcoin Cash, Dogecoin, Litecoin, Tron, Ripple, Tether, and Cardano
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Betplay</td>
+                            <td>Bitcoin, Ethereum, Binance, Litecoin, Dogecoin, Tether, USD Coin, and Tron</td>
+                        </tr>
+                        <tr>
+                            <td>Ybets (previously Inmerion)</td>
+                            <td>Bitcoin, Ethereum, Litecoin, Tether, Tron, Dogecoin, Bitcoin Cash, and Binance Coin</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2><span id="toc_section_heading_14">Best Cryptocurrencies Available at No KYC Casinos</span></h2>
+            <p>Cryptocurrencies have revolutionized online gambling, offering privacy and fast transactions. Crypto
+                casinos with no KYC checks prioritize these digital currencies for their anonymity. Here are the top
+                cryptocurrencies you can use at these casinos:</p>
+
+            <ul class="su-list">
+                <li> <strong>Bitcoin (BTC)</strong><br>
+                    Bitcoin is the pioneer of cryptocurrencies, known for its widespread acceptance and high
+                    security. Many no KYC crypto casinos in the USA accept Bitcoin due to its reliability and strong
+                    user base.</li>
+                <li><strong>Ethereum (ETH)</strong><br>
+                    Ethereum stands out with its smart contract functionality, enabling more than just transactions.
+                    Its fast processing times make it a favorite among online gamblers.</li>
+                <li><strong>Litecoin (LTC)</strong><br>
+                    Litecoin offers quicker transaction confirmations compared to Bitcoin. Its lower fees make it an
+                    attractive banking option at no KYC crypto casinos.</li>
+                <li><strong>Binance Coin (BNB)</strong><br>
+                    Binance Coin is popular due to its association with one of the largest cryptocurrency exchanges.
+                    It’s more trustworthy than some meme coins and offers fast and low-cost transactions, making it
+                    an ideal payment method.</li>
+                <li><strong>Dogecoin (DOGE)</strong><br>
+                    Dogecoin, originally created as a meme, has gained popularity for its fast and low-cost
+                    transactions. It’s widely accepted by no KYC crypto casino sites looking for fun and efficient
+                    payment options.</li>
+                <li><strong>USD Coin (USDC)</strong><br>
+                    USD Coin is a stablecoin pegged to the US dollar. It provides stability and low volatility
+                    compared to other cryptos, making it perfect for players who want to avoid the fluctuations of
+                    other cryptocurrencies.</li>
+                <li><strong>Tron (TRON)</strong><br>
+                    Tron is a safe and popular option at the best crypto casinos with no KYC due to its fast
+                    transactions and low fees. Its blockchain is designed to support high-speed transactions.</li>
+                <li><strong>Solana (SOL)</strong><br>
+                    Like Tron, Solana offers high-speed and low-cost transactions, making it a rising star in the
+                    cryptocurrency world. Its scalability makes it an excellent choice for crypto casinos.</li>
+                <li><strong>Monero (XMR)</strong><br>
+                    Monero is renowned for its strong privacy features, offering unparalleled anonymity. It’s ideal
+                    for players who prioritize security and discretion.</li>
+                <li><strong>Exclusive Coins</strong><br>
+                    Some of the best no KYC crypto casino sites have developed their own exclusive coins, offering
+                    unique benefits. For instance, LBLOCK for Lucky Block Casino and $TGC for TG.Casino provide
+                    innovative features and enhanced privacy for users. These casinos also offer innovative
+                    promotions and rewards to coin owners.</li>
+            </ul>
+
+            <h2><span id="toc_section_heading_15">Regular Online Casinos vs. No KYC Casinos</span></h2>
+            <p>Choosing between regular online casinos and no KYC casinos depends on your priorities. Whether you value
+                privacy, speed, or global accessibility, understanding the differences can help you make an informed
+                decision. Here’s a comparison to guide you:</p>
+
+            <div class="su-table su-table-alternate">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p style="text-align: center"><strong>Regular Online Casinos</strong></p>
+                            </td>
+                            <td style="text-align: center"><strong>No KYC Online Casinos</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">Requires ID verification for transactions</td>
+                            <td>
+                                <p style="text-align: center">No ID required to sign up, deposit and cash out your
+                                    winnings</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="text-align: center">Limited to players in specific regions</p>
+                            </td>
+                            <td style="text-align: center">Open to players from around the globe</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">Personal data stored which could be risky</td>
+                            <td>
+                                <p style="text-align: center">No personal data needed, ensuring privacy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="text-align: center">Lengthy sign-up process (10-20 minutes)</p>
+                            </td>
+                            <td style="text-align: center">Fast sign-up process (1-2 minutes)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">Withdrawals may take 3-5 business days</td>
+                            <td>
+                                <p style="text-align: center">Immediate withdrawals with no delays</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="text-align: center">Supports both traditional banking methods and cryptos</p>
+                            </td>
+                            <td>
+                                <p style="text-align: center">Exclusively supports cryptocurrency transactions</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2><span id="toc_section_heading_16">Tips for Gambling With No KYC Online Casinos</span></h2>
+            <p>
+                Whether you decide to use a standard or no-KYC casino, there are a few safety tips that everyone should
+                keep in mind when gambling with crypto. Setting these rules for yourself and following them every time
+                you gamble will make the experience safer and more enjoyable:
+            </p>
+
+            <div data-tabs class="su-tabs su-tabs-style-default su-tabs-mobile-stack su-tabs-vertical">
+
+                <div class="su-tabs-nav">
+                    <span class="su-tabs-current" data-tab-trigger="1">
+                        <strong>Set a spending limit</strong>
+                    </span>
+                    <span class="" data-tab-trigger="2">
+                        <strong>Take breaks</strong>
+                    </span>
+                    <span class="" data-tab-trigger="3">
+                        <strong>
+                            Avoid large wagers in an
+                            attempt to win back losses
+                        </strong>
+                    </span>
+                    <span class="" data-tab-trigger="4">
+                        <strong>Avoid emotional gambling</strong>
+                    </span>
+                    <span class="" data-tab-trigger="5">
+                        <strong>
+                            Place bets when you
+                            understand the rules
+                        </strong>
+                    </span>
+                </div>
+
+                <div class="su-tabs-panes">
+                    <div class="su-tabs-pane su-u-clearfix su-u-trim su-tabs-pane-open" data-tab-content="1">
+                        <p>
+                            You may quickly lose more of your investment than you’re comfortable with if you don’t set
+                            spending limits. Determine how much you’re willing to lose before placing any bets.
+                        </p>
+                    </div>
+                    <div class="su-tabs-pane su-u-clearfix su-u-trim" data-tab-content="2">
+                        <p>
+                            Gambling for long periods can wear on you and become addictive. Take breaks to center
+                            yourself.
+                        </p>
+                    </div>
+                    <div class="su-tabs-pane su-u-clearfix su-u-trim" data-tab-content="3">
+                        <p>
+                            Hitting it big on a maximum bet is the dream, but if you’ve already lost, save as much as
+                            you
+                            can, and don’t try to recoup your losses with hefty wagers.
+                        </p>
+                    </div>
+                    <div class="su-tabs-pane su-u-clearfix su-u-trim" data-tab-content="4">
+                        <p>Only gamble when you’re in the right frame of mind to ensure you play responsibly.</p>
+                    </div>
+                    <div class="su-tabs-pane su-u-clearfix su-u-trim" data-tab-content="5">
+                        <p>
+                            If you’re new to sports betting or poker, take some time to understand the rules before you
+                            place your first bet. This way, you can make an informed decision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2><span id="toc_section_heading_19">No KYC Casino FAQs</span></h2>
+
+            <div data-spoiler="one" class="fi-faq-container">
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Are no KYC casinos legal?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>Yes, no KYC casinos are legal. It’s important to check they are licensed and regulated by
+                            reputable authorities like Curacao e-Gaming and Panama Gaming Control Board. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Which casino does not need verification?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>Several reputable casinos like TG.Casino, Lucky Block, and Mega Dice do not require
+                            verification.
+                            These platforms prioritize user privacy and easy access. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>How can I bypass the gambling location?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>To bypass location restrictions you can use a VPN. It masks your IP address, allowing access
+                            to
+                            restricted sites. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Are all crypto casinos anonymous?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>No, not all. Some crypto casinos require basic KYC to comply with regulations. This depends
+                            on
+                            the license and regulations which the casino needs to abide with. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Which aviator game has no KYC?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>Some versions on TG.Casino and Lucky Block require no KYC. These are some of the top aviator
+                            casinos offering easy access without extensive verification. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Are no ID verification casinos safe?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>Yes no ID verification casinos are safe. Make sure the casino you choose is licensed and
+                            regulated by reputable authorities. This information can generally be found at the bottom of
+                            the
+                            casino site. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>Do you need an ID to withdraw casino winnings?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>Not always, but some no KYC casinos may require it for large withdrawals. Policies vary
+                            between
+                            platforms, so it’s always good to check the terms and conditions. </p>
+                    </div>
+                </div>
+                <div class="fi-faq-content-shortcode">
+                    <div class="fi-faq-content-shortcode__question" data-spoiler-trigger>
+                        <h3>What is the best no KYC casino?</h3>
+                    </div>
+                    <div class="fi-faq-content-shortcode__answer" style="display: none;">
+                        <p>TG.Casino one of the best no KYC casinos accessible via Telegram app. It offers a safe and
+                            secure
+                            platform with thousands of games, generous bonuses, and exclusive rewards for $TGC crypto
+                            holders. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container home">
+            <div class="border-for-mobile"></div>
+            <div class="col-12 author-info-box ">
+                <div class="pr-0 pl-0 author-avatar">
+                    <div class="pr-0 pl-0 author-avatar-img">
+                        <img src="https://nokyc.com/wp-content/uploads/2023/12/philip-150x150.jpg" alt="">
+                    </div>
+                    <div class="author-avatar-social">
+                        <span class="social-iconssection">
+                        </span>
+                    </div>
+                </div>
+                <div class="author-description">
+                    <div class="author_inf">
+                        <div class="author_section__name">
+                            Philip
+                            <div class="author_section__label__wrapper">
+                                <div class="author_section__label_icon">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_8510_29570)">
+                                            <path
+                                                d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                fill=""></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8510_29570">
+                                                <rect width="10" height="10" fill="white" transform="translate(0 0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="author_section__label">
+                                    Editor-in-Chief
+                                </div>
+                            </div>
+                        </div>
+                        <div class="author-mobile-social">
+                            <span class="social-iconssection">
+                            </span>
+                        </div>
+                    </div>
+                    <p>Phil joined NoKYC in December 2023 as its Editor-in-Chief.
+
+                        Having pursued extensive studies in statistics and economics, Philip combines his academic
+                        prowess with his enthusiasm for casino culture. This unique blend of skills empowers him to
+                        provide insightful and in-depth reviews, helping casino players make informed decisions.
+
+                        Philip's approach to casino reviews is not just about the glitz and glamour; it's a serious
+                        business. He delves into the critical aspects of user privacy, understanding that in the digital
+                        age, safeguarding personal information is paramount. His reviews scrutinize the privacy policies
+                        of casinos, ensuring they meet the highest standards of data protection and confidentiality.</p>
+                    <div class="author-link">
+                        <a href="#" rel="author">
+                            View all posts by Philip</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="newsletter">
+    <div class="container">
+        <div class="newsletter__inner">
+            <div class="newsletter__body">
+                <h2 class="newsletter__title">
+                    Crypto Casinos Newsletter
+                </h2>
+                <div class="newsletter__text">
+                    Subscribe to our weekly newsletter and receive our best bonuses right in your inbox!
+                </div>
+                <form action="/">
+                    <div class="newsletter__form">
+                        <input type="text" placeholder="Your Email">
+                        <button type="submit" class="btn-green">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="newsletter__image">
+                <img src="https://nokyc.com/wp-content/uploads/2023/12/uk.svg">
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer-info">
+    <div class="background-container">
+        <div class="container">
+            <div class="footer-info__head">
+                <div class="footer-info__logo">
+                    <a href="/"> 
+                        <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-info__icons">
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/twitter.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/linkeding.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 footer-one footer2">
+
+                    <div class="widget nav_menu-8 widget_nav_menu">
+
+                        <p class="widget-title">About</p>
+
+                        <div class="menu-footer-menu-container">
+                            <ul class="menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a href="#">About us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16627">
+                                    <a href="#">Contuct us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16628">
+                                    <a href="#">How we rate</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16629">
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16630">
+                                    <a href="#">Sitemaps</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 pr-0 pl-0 text-center copy">
+                    <section class="widget text-7 widget_text">
+                        <div class="textwidget">
+                            <p>© nokyc.com All Rights Reserved<!--?=date('Y')?--></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 footer-logo-inner text-center">
+        <div class="container">
+            <div class="col-12 footerlast">
+                <section class="widget text-13 widget_text">
+                    <div class="textwidget">
+                        <div class="footer-logo">
+                            <ul class="footer-info__logo-list">
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamblers-anonymous-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/mga-license-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/curacao-egaming-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/betblocker-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamban-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/18.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget text-12 widget_text">
+                    <div class="textwidget">
+                        <p>
+                            Users must be 18+. If you or someone close to you is struggling with gambling addiction
+                            issues, contact 1-800 GAMBLER for assistance immediately.
+                        </p>
+                        <p>
+                            This site is protected by reCAPTCHA and the Google&nbsp;
+                            <a href="#" > Privacy Policy </a>
+                            &nbsp;and&nbsp;
+                            <a href="#" >Terms of Service</a>&nbsp;apply.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

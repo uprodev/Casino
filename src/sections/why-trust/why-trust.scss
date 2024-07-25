@@ -1,0 +1,220 @@
+.why-trust-section {
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.why-trust-section h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #1C2642;
+    margin-top: 0
+}
+
+.why-trust-section .summary_text {
+    font-size: 16px;
+    line-height: 150%;
+    color: #2E364E
+}
+
+.why-trust-section .launched-one .about-button {
+    border: 1px solid #1c2642;
+    border-radius: 44px;
+    padding: 10px 24px 10px 24px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #1C2642
+}
+
+.why-trust-section .launched-one .about-button::after {
+    content: "";
+    width: 17px;
+    height: 17px;
+    float: right;
+    margin-left: 8px;
+    background: var(--icon-arrow-right-black) bottom no-repeat;
+    -webkit-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out
+}
+
+.why-trust-section .launched-one .about-button:hover {
+    background: #F0F3F7
+}
+
+@media screen and (min-width: 767px) {
+    .why-trust-section .launched-one .about-button:hover::after {
+        -webkit-transform:translateX(4px);
+        transform: translateX(4px)
+    }
+}
+
+.why-trust-section .launched-one ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 22px;
+    margin-bottom: 26px
+}
+
+.why-trust-section .launched-one li {
+    padding: 0 0 5px 32px;
+    background-image: var(--icon-check-circle-green);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2E364E
+}
+
+.why-trust-section .launched-two .launched-logo {
+    margin-top: 0;
+    text-align: center
+}
+
+.why-trust-section .launched-two .launched-logo .why_trust_image_logo {
+    max-width: 401px
+}
+
+.why-trust-section .launched-two .launched-logo .why_trust_image_logo2 {
+    margin-top: 24px;
+    max-width: 185px
+}
+
+.why-trust-section .launched-two .comparison-section {
+    margin-top: 24px;
+    border-top: 1px solid #E8E8E8;
+    padding-top: 26px
+}
+
+.why-trust-section .launched-two .comparison-section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap
+}
+
+.why-trust-section .launched-two .comparison-section .motto-text {
+    margin-top: 26px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1C2642
+}
+
+@media screen and (max-width: 767px) {
+    .why-trust-section {
+        padding-top:24px;
+        padding-bottom: 24px
+    }
+
+    .why-trust-section .container {
+        padding-right: 16px;
+        padding-left: 16px
+    }
+
+    .why-trust-section {
+        padding-top: 24px;
+        padding-bottom: 24px
+    }
+
+    .why-trust-section h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 16px
+    }
+
+    .why-trust-section .summary_text,.why-trust-section .launched-one li {
+        font-size: 14px;
+        line-height: 150%
+    }
+
+    .why-trust-section .launched-one ul {
+        margin-top: 18px;
+        margin-bottom: 18px
+    }
+
+    .why-trust-section .mob_border {
+        border-bottom: 1px solid #E8E8E8
+    }
+
+    .why-trust-section .launched-one .about-button {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 10px 24px 10px 24px
+    }
+
+    .why-trust-section .launched-one .about_button_mob {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 24px
+    }
+
+    .why-trust-section .launched-two {
+        margin-top: 24px
+    }
+
+    .why-trust-section .launched-two .launched-logo .why_trust_image_logo {
+        max-width: 267px
+    }
+
+    .why-trust-section .launched-two .comparison-section {
+        border-top: none;
+        margin-top: 24px;
+        padding-top: 0
+    }
+
+    .why-trust-section .launched-two .comparison-section .motto-text {
+        padding-top: 24px;
+        border-top: 1px solid #E8E8E8;
+        font-size: 20px;
+        line-height: 25px
+    }
+}
+
+.authors_group_block__wrapper {
+    display: flex;
+    align-items: center
+}
+
+.authors_group_block__author {
+    width: 35px;
+    height: 35px
+}
+
+.authors_group_block__author:not(:first-child) {
+    margin-left: -10px
+}
+
+.authors_group_block__author:hover {
+    z-index: 9!important
+}
+
+.authors_group_block__author img {
+    width: 33px;
+    height: 33px;
+    box-shadow: 0 0 0 2px #fff;
+    border-radius: 35px;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    object-fit: cover
+}
+
+.authors_group_block__author:hover img {
+    transform: scale(1.1)
+}
+
+.authors_group_block__green_tick {
+    margin-left: -7px;
+    z-index: 8
+}
+

@@ -1,0 +1,23 @@
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.last-no-margin {
+    & >:last-child {
+        margin-bottom: 0;
+    }
+}
+.first-no-margin {
+    & >:first-child {
+        margin-top: 0;
+    }
+}
+
+// spacing
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.content-visible {
+    content-visibility: visible !important;
+}
