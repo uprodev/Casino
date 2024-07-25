@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Casino</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css
+" rel="stylesheet">
+	<style>
+		.page-loaded .page-loader {
+			display: none;
+		}
+
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 100;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			color: #6c3c87;
+		}
+
+		.lds-roller,
+		.lds-roller div,
+		.lds-roller div:after {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.lds-roller {
+			display: inline-block;
+			position: relative;
+			width: 80px;
+			height: 80px;
+		}
+
+		.lds-roller div {
+			-webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			-webkit-transform-origin: 40px 40px;
+			-ms-transform-origin: 40px 40px;
+			transform-origin: 40px 40px;
+		}
+
+		.lds-roller div:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			width: 7.2px;
+			height: 7.2px;
+			border-radius: 50%;
+			background: currentColor;
+			margin: -3.6px 0 0 -3.6px;
+		}
+
+		.lds-roller div:nth-child(1) {
+			-webkit-animation-delay: -0.036s;
+			animation-delay: -0.036s;
+		}
+
+		.lds-roller div:nth-child(1):after {
+			top: 62.62742px;
+			left: 62.62742px;
+		}
+
+		.lds-roller div:nth-child(2) {
+			-webkit-animation-delay: -0.072s;
+			animation-delay: -0.072s;
+		}
+
+		.lds-roller div:nth-child(2):after {
+			top: 67.71281px;
+			left: 56px;
+		}
+
+		.lds-roller div:nth-child(3) {
+			-webkit-animation-delay: -0.108s;
+			animation-delay: -0.108s;
+		}
+
+		.lds-roller div:nth-child(3):after {
+			top: 70.90963px;
+			left: 48.28221px;
+		}
+
+		.lds-roller div:nth-child(4) {
+			-webkit-animation-delay: -0.144s;
+			animation-delay: -0.144s;
+		}
+
+		.lds-roller div:nth-child(4):after {
+			top: 72px;
+			left: 40px;
+		}
+
+		.lds-roller div:nth-child(5) {
+			-webkit-animation-delay: -0.18s;
+			animation-delay: -0.18s;
+		}
+
+		.lds-roller div:nth-child(5):after {
+			top: 70.90963px;
+			left: 31.71779px;
+		}
+
+		.lds-roller div:nth-child(6) {
+			-webkit-animation-delay: -0.216s;
+			animation-delay: -0.216s;
+		}
+
+		.lds-roller div:nth-child(6):after {
+			top: 67.71281px;
+			left: 24px;
+		}
+
+		.lds-roller div:nth-child(7) {
+			-webkit-animation-delay: -0.252s;
+			animation-delay: -0.252s;
+		}
+
+		.lds-roller div:nth-child(7):after {
+			top: 62.62742px;
+			left: 17.37258px;
+		}
+
+		.lds-roller div:nth-child(8) {
+			-webkit-animation-delay: -0.288s;
+			animation-delay: -0.288s;
+		}
+
+		.lds-roller div:nth-child(8):after {
+			top: 56px;
+			left: 12.28719px;
+		}
+
+		@-webkit-keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@media print {
+
+			header,
+			footer {
+				display: none;
+			}
+		}
+	</style>
+
+	
+<script src="assets/js/vendors.js"></script>
+<script src="assets/js/app.js"></script>
+
+</head>
+
+<body class="page">
+    <div class="page-loader">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+    <header class="header__wrapper not_to_divide">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="No KYC">
+            </a>
+        </div>
+
+        <div class="header__mega_menu">
+            <div class="mega_menu__mobile_toggle" data-action="toggle-show-hide-mega-menu"></div>
+            <ul class="mega_menu__list" data-mega-menu >
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        No KYC
+                        Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Crypto Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">Lorem ipsum dolor sit.</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Betting
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 4</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__side">
+            <div class="site_search__btn" data-action="show-main-search">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.5 16C10.275 15.9996 11.9988 15.4054 13.397 14.312L17.793 18.708L19.207 17.294L14.811 12.898C15.905 11.4997 16.4996 9.77544 16.5 8C16.5 3.589 12.911 0 8.5 0C4.089 0 0.5 3.589 0.5 8C0.5 12.411 4.089 16 8.5 16ZM8.5 2C11.809 2 14.5 4.691 14.5 8C14.5 11.309 11.809 14 8.5 14C5.191 14 2.5 11.309 2.5 8C2.5 4.691 5.191 2 8.5 2Z"
+                        fill="white"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="site_search" data-main-search >
+        <div class="site_search__inner">
+            <div class="site_search__title">Suche nokyc.com</div>
+            <div class="site_search__close" data-action="hide-main-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                    <path
+                        d="M8.66522 6.49999L13.2724 1.90357C13.4741 1.70181 13.5875 1.42818 13.5875 1.14285C13.5875 0.857529 13.4741 0.583892 13.2724 0.382138C13.0706 0.180384 12.797 0.0670395 12.5117 0.0670395C12.2263 0.0670395 11.9527 0.180384 11.7509 0.382138L7.15451 4.98928L2.55808 0.382138C2.35633 0.180384 2.08269 0.0670395 1.79737 0.0670395C1.51204 0.0670395 1.23841 0.180384 1.03665 0.382138C0.834899 0.583892 0.721555 0.857529 0.721555 1.14285C0.721555 1.42818 0.834899 1.70181 1.03665 1.90357L5.6438 6.49999L1.03665 11.0964C0.93623 11.196 0.856522 11.3145 0.802127 11.4451C0.747732 11.5757 0.719727 11.7157 0.719727 11.8571C0.719727 11.9986 0.747732 12.1386 0.802127 12.2692C0.856522 12.3997 0.93623 12.5182 1.03665 12.6179C1.13626 12.7183 1.25476 12.798 1.38532 12.8524C1.51588 12.9068 1.65593 12.9348 1.79737 12.9348C1.93881 12.9348 2.07885 12.9068 2.20941 12.8524C2.33998 12.798 2.45848 12.7183 2.55808 12.6179L7.15451 8.01071L11.7509 12.6179C11.8505 12.7183 11.969 12.798 12.0996 12.8524C12.2302 12.9068 12.3702 12.9348 12.5117 12.9348C12.6531 12.9348 12.7931 12.9068 12.9237 12.8524C13.0543 12.798 13.1728 12.7183 13.2724 12.6179C13.3728 12.5182 13.4525 12.3997 13.5069 12.2692C13.5613 12.1386 13.5893 11.9986 13.5893 11.8571C13.5893 11.7157 13.5613 11.5757 13.5069 11.4451C13.4525 11.3145 13.3728 11.196 13.2724 11.0964L8.66522 6.49999Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <form class="site_search__form" role="search" method="get" action="">
+                <input class="site_search__input" type="text" value=""
+                    placeholder="300+ Gratiswetten, Bewertungen &amp; Promo-Codes" name="s">
+                <input style="background-image: url(assets/icons/search-img.svg);" class="site_search__submit" type="submit" value="" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</header>
+
+    <main id="app">
+        <div class="bread-wrapper-top">
+            <div class="container">
+                <div class="bread-wrapper">
+                    <div class="bread-inner">
+                        <span>
+                            <a class="entry-crumb" href="#">Startseite</a>
+                        </span>
+                        <span>
+                            »
+                        </span>
+                        <span class="last-crumb" style="text-transform: capitalize;">about us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages-outer">
+            <div class="container text-content">
+                <div class="pages-con">
+                    <div class="col-12 col-lg-9 main">
+                        <div class="page-header ">
+                            <h1>About NoKYC</h1>
+                        </div>
+
+                        <div class="author_section__wrapper">
+                            <div class="author_section__avatar_and_meta">
+                                <a class="author_section__avatar" href="#">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg" alt="">
+                                </a>
+                                <div class="author_section__meta">
+                                    <a class="author_section__name" href="#">
+                                        Johanna Gullberg
+                                    </a>
+                                    <div class="author_section__job_and_fact_checked">
+                                        <div class="author_section__label__wrapper">
+                                            <div class="author_section__label_icon">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill=""></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)">
+                                                            </rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label">
+                                                Editor-in-Chief
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="author_section__date">
+                                        Updated: <span>10 MAY 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="author_section__extra">
+                                <div class="btn_with_tooltip disclaimer">
+                                    <div class="btn_with_tooltip__btn">
+                                        Disclosure</div>
+                                    <div class="btn_with_tooltip__tip">
+                                        We sometimes use affiliate links in our content, when
+                                        clicking on those we might receive a commission - at no extra cost to you. By
+                                        using this
+                                        website you agree to our terms and conditions and privacy policy.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>At NoKYC we specialize in reviewing and providing information on online sportsbooks, casinos,
+                            and poker sites where privacy and safety take center stage. Backed by a team of igaming
+                            experts, we strive to help you find the best, safest, and most entertaining brands for your
+                            gambling requirements.</p>
+
+                        <div id="toc_container" class="no_bullets contracted">
+                            <div class="toc_toggle">
+                                <div class="toc_arrow">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12.06" cy="12.06" r="11.8" fill="#1C2642"></circle>
+                                        <path d="M6,10.45l6,6,6-6" fill="none" stroke="#fff" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <div class="toc_title">
+                                    Contents
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2><span id="Why_Trust_Us">Why Trust Us</span></h2>
+
+                        <p>Our trustworthy, honest, and unbiased reviews ensure you get the most accurate information.
+                            The methodology used to produce these testimonials is rigorous and supported by strict
+                            editorial guidelines. Every article, review, and guide undergoes a three-step process of
+                            thoroughly researching, fact-checking, and updating.</p>
+                        <h2><span id="Our_Editorial_Process">Our Editorial Process</span></h2>
+                        <p>Our editorial process is meticulously designed to deliver accurate, comprehensive, and
+                            unbiased content in the online gambling industry. Here’s a glimpse into how we ensure the
+                            quality of our content:</p>
+                        <ul>
+                            <li><b>Research</b>: The team extensively researches each casino, sportsbook, and poker
+                                site, examining their history, reputation, licensing, and offerings.</li>
+                            <li><b>Testing</b>: Our in-house reviewers personally test the platforms for 10+ parameters,
+                                such as user experience, game variety, payment options, and customer service.</li>
+                            <li><b>Review</b>: The findings are compiled into detailed reviews. The team highlights each
+                                platform’s key USPs, strengths, and weaknesses, providing a balanced view.</li>
+                            <li><b>Verification</b>: Before publication, each review undergoes a rigorous verification
+                                process to ensure accuracy and fairness.</li>
+                            <li><b>Update</b>: The online gambling landscape is ever-changing. We regularly update our
+                                reviews to reflect new features, the latest information, and player feedback.</li>
+                        </ul>
+                        <h2><span id="Meet_Our_Team_of_Experts">Meet Our Team of Experts</span></h2>
+                        <p>Our team comprises seasoned professionals with extensive experience in the gambling industry.
+                            Their expertise and insights are reflected in the quality of our reviews and guides.</p>
+
+                        <div class="authors-list__wrapper">
+                            <div class="authors-list">
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Johanna Gullberg
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        15 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials">
+                                        <a class="authors-list__author-social" href="#">
+                                            <img src="assets/icons/linkedin-outline.svg" alt="">
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Vyom Chaud
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        14 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/02/slika1-150x150.png"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Emilija Blagojevic
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        4 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials">
+                                        <a class="authors-list__author-social" href="#">
+                                            <img src="assets/icons/linkedin-outline.svg" alt="">
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/02/my-face-150x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Geoff Kukard
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        3 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/04/Screenshot_20240411_133143-150x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Owen Fulda
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper">
+                                            <div class="author_section__label_icon">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill=""></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label">
+                                                Interview Host
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        2 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2023/12/philip-150x150.jpg" alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Philip
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper">
+                                            <div class="author_section__label_icon">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill=""></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label">
+                                                Interview Host
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        2 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/05/Gmail-DP-150x150.png"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Liam Solomon
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        1 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/02/CPearson-headshot-3-crop-small-and-cropped-150x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Charlie Pearson
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Betting Expert
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        1 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                                <div class="authors-list__author">
+                                    <a class="authors-list__author-avatar" href="#">
+                                        <img src="https://nokyc.com/wp-content/uploads/2024/02/thumbnail_IMG_0085-150x150.jpg"
+                                            alt="">
+                                    </a>
+                                    <a class="authors-list__author-name" href="#">
+                                        Johanna Gullberg
+                                    </a>
+                                    <div class="authors-list__author-job">
+                                        <div class="author_section__label__wrapper" style="background: #D2FFE6;">
+                                            <div class="author_section__label_icon" style="background: #AFF2CD;">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill="#014C6B"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white"
+                                                                transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label " style="color: #2E364E;">
+                                                Gavin Beech
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="authors-list__author-stats">
+                                        15 Articles
+                                    </div>
+                                    <div class="authors-list__author-socials"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2><span id="Contact_Us">Contact Us</span></h2>
+
+                        <p>Do you have questions, suggestions, or inquiries about our team? <a href="#">Contact us</a>, and we will be happy to assist you.</p>
+                        <p>&nbsp;</p>
+
+                        <div class="col-12 author-info-box ">
+                            <div class="pr-0 pl-0 author-avatar">
+                                <div class="pr-0 pl-0 author-avatar-img">
+                                    <img src="https://nokyc.com/wp-content/uploads/2024/02/Profilfoto-litet-WP-150x150.jpg" alt="">
+                                </div>
+                                <div class="author-avatar-social">
+                                    <span class="social-iconssection">
+                                        <a href="#" rel="nofollow" target="_blank" class="fi-global__background-image__linkedin">
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="author-description">
+                                <div class="author_inf">
+                                    <div class="author_section__name">
+                                        Johanna Gullberg
+                                        
+                                        <div class="author_section__label__wrapper">
+                                            <div class="author_section__label_icon">
+                                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_8510_29570)">
+                                                        <path
+                                                            d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                            fill=""></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8510_29570">
+                                                            <rect width="10" height="10" fill="white" transform="translate(0 0.5)">
+                                                            </rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="author_section__label">
+                                                Editor-in-Chief
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="author-mobile-social">
+                                        <span class="social-iconssection">
+                                            <a href="#" rel="nofollow" target="_blank" class="fi-global__background-image__linkedin">
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <div class="author-link">
+                                    <a href="#" rel="author">
+                                        View all posts by Johanna Gullberg
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 sidebar stick-last-child"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-info">
+    <div class="background-container">
+        <div class="container">
+            <div class="footer-info__head">
+                <div class="footer-info__logo">
+                    <a href="/"> 
+                        <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-info__icons">
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/twitter.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/linkeding.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 footer-one footer2">
+
+                    <div class="widget nav_menu-8 widget_nav_menu">
+
+                        <p class="widget-title">About</p>
+
+                        <div class="menu-footer-menu-container">
+                            <ul class="menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a href="#">About us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16627">
+                                    <a href="#">Contuct us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16628">
+                                    <a href="#">How we rate</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16629">
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16630">
+                                    <a href="#">Sitemaps</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 pr-0 pl-0 text-center copy">
+                    <section class="widget text-7 widget_text">
+                        <div class="textwidget">
+                            <p>© nokyc.com All Rights Reserved<!--?=date('Y')?--></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 footer-logo-inner text-center">
+        <div class="container">
+            <div class="col-12 footerlast">
+                <section class="widget text-13 widget_text">
+                    <div class="textwidget">
+                        <div class="footer-logo">
+                            <ul class="footer-info__logo-list">
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamblers-anonymous-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/mga-license-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/curacao-egaming-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/betblocker-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamban-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/18.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget text-12 widget_text">
+                    <div class="textwidget">
+                        <p>
+                            Users must be 18+. If you or someone close to you is struggling with gambling addiction
+                            issues, contact 1-800 GAMBLER for assistance immediately.
+                        </p>
+                        <p>
+                            This site is protected by reCAPTCHA and the Google&nbsp;
+                            <a href="#" > Privacy Policy </a>
+                            &nbsp;and&nbsp;
+                            <a href="#" >Terms of Service</a>&nbsp;apply.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
