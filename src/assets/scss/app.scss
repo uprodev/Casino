@@ -594,7 +594,7 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
 }
 
 .contact-us .contact-form .wpcf7-form-control.wpcf7-submit {
-    background: #0fcea0;
+   // background: #0fcea0;
     border: none;
     border-radius: 44px;
     box-shadow: 0 10px 36px #3cb37121;
@@ -610,6 +610,11 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
     -webkit-text-decoration: none;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s;
     width: 196px;
+
+    @media #{$mouse-device} {
+        &:hover {
+            background-color: var(--bm-cta-button-hover-background);
+        }
+    }
 }

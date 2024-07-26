@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Casino"
+})
+
+<body class="page">
+    @@include('components/loader/_page-loader.html', {})
+
+    @@include('sections/header/_header.html', {})
+
+    <main id="app">
+        <div class="bread-wrapper-top">
+            <div class="container">
+                <div class="bread-wrapper">
+                    <div class="bread-inner">
+                        <span>
+                            <a class="entry-crumb" href="#">Startseite</a>
+                        </span>
+                        <span>
+                            »
+                        </span>
+                        <span class="last-crumb" style="text-transform: capitalize;">Blog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages-outer">
+            <div class="container">
+                <div class="col-12 col-fullwidth">
+                    <div class="page-header ">
+                        <h1>Blog</h1>
+                    </div>
+
+                    <article >
+                        <div class="col-12 category-heading">
+                            <div class="row">
+                                <header>
+                                    <h2>
+                                        <a
+                                            href="#">
+                                            The inaugural Esports World Cup boasts a record $62.5 million prize pool
+                                        </a>
+                                    </h2>
+                                    <p class="post-meta">
+                                        <span class="post-info-author vcard author">
+                                            <img class="post-info-icon" src="assets/icons/edit.svg" alt="">
+                                            <span class="fn">Vyom Chaud</span>
+                                        </span>
+
+                                        <span class="post-info-date post_date date updated">
+                                            <img class="post-info-icon" src="assets/icons/date.svg" alt="">
+                                            <time class="post_date entry-date updated">Updated: 18 July 2024</time>
+                                        </span>
+                                    </p>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-5 category-img">
+                                <img src="https://nokyc.com/wp-content/uploads/2024/07/florian-olivo-Mf23RF8xArY-unsplash-300x200.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-7 category-right-text">
+                                <div class="entry-summary">
+                                    <p>The first-ever Esports World Cup is currently being held in Riyadh, Saudi Arabia,
+                                        from July 3 to August 25, 2024. As per the numbers presented by NoKyc.com, the
+                                        entire event boasts a record prize pool of $62.5 million. World Cup to feature
+                                        21 different game titles The inaugural Esports World Cup, which is being touted
+                                        … </p>
+                                    <a class="read-more-button" href="#">
+                                        Read
+                                        More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article >
+                        <div class="col-12 category-heading">
+                            <div class="row">
+                                <header>
+                                    <h2>
+                                        <a href="#">
+                                            Deposits In Digital Banks To Cross $15 Trillion In 2024
+                                        </a>
+                                    </h2>
+                                    <p class="post-meta">
+                                        <span class="post-info-author vcard author">
+                                            <img class="post-info-icon" src="assets/icons/edit.svg" alt="">
+                                            <span class="fn">Vyom Chaud</span>
+                                        </span>
+
+                                        <span class="post-info-date post_date date updated">
+                                            <img class="post-info-icon" src="assets/icons/date.svg" alt="">
+                                            <time class="post_date entry-date updated">Updated: 16 July 2024</time>
+                                        </span>
+                                    </p>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-5 category-img">
+                                <img src="https://nokyc.com/wp-content/uploads/2024/07/markus-winkler-Q6uqw_Hjye8-unsplash-300x200.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-7 category-right-text">
+                                <div class="entry-summary">
+                                    <p>
+                                        Digital banks have made a sizable dent in the business of traditional banks in recent years. The popularity of digital banks continues to grow, and according to the numbers presented by Nokyc.com, customers are expected to deposit wealth worth $15.32 trillion in 2024. Value of deposits set to grow by 22.7% in 2024 Digital banks …
+                                    </p>
+                                    <a class="read-more-button" href="#">
+                                        Read
+                                        More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="articles-pagination-desktop">
+
+                        <nav class="navigation pagination" role="navigation">
+                            <div class="nav-links">
+                                <div class="prev page-numbers disabled">
+                                    <div class="arrow"></div>
+                                </div>
+                                <span aria-current="page" class="page-numbers current">1</span>
+                                <a class="page-numbers" href="https://nokyc.com/blog/page/2/">2</a>
+                                <a class="next page-numbers" href="https://nokyc.com/blog/page/2/">
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="articles-pagination-mobile">
+
+                        <nav class="navigation pagination" role="navigation">
+                            <div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+                                <a class="page-numbers" href="https://nokyc.com/blog/page/2/">2</a>
+                            </div>
+                        </nav>
+
+                        <div class="articles-pagination-mobile__arrows">
+                            <div class="prev page-arrows disabled">
+                                <div class="arrow"></div>
+                            </div>
+                            <a href="https://nokyc.com/blog/page/2/" class="next page-arrows">
+                                <div class="arrow"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@include('sections/footer/_footer.html', {})
+</body>
+
+</html>

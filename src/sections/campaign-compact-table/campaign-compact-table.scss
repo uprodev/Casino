@@ -1,0 +1,11 @@
+.campaign-compact-table__wrapper {
+    & table.campaign-compact-table {
+        & ul {
+            margin-bottom: 0;
+            list-style: none;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Casino</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css
+" rel="stylesheet">
+	<style>
+		.page-loaded .page-loader {
+			display: none;
+		}
+
+		.page-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 100;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			color: #6c3c87;
+		}
+
+		.lds-roller,
+		.lds-roller div,
+		.lds-roller div:after {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.lds-roller {
+			display: inline-block;
+			position: relative;
+			width: 80px;
+			height: 80px;
+		}
+
+		.lds-roller div {
+			-webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			-webkit-transform-origin: 40px 40px;
+			-ms-transform-origin: 40px 40px;
+			transform-origin: 40px 40px;
+		}
+
+		.lds-roller div:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			width: 7.2px;
+			height: 7.2px;
+			border-radius: 50%;
+			background: currentColor;
+			margin: -3.6px 0 0 -3.6px;
+		}
+
+		.lds-roller div:nth-child(1) {
+			-webkit-animation-delay: -0.036s;
+			animation-delay: -0.036s;
+		}
+
+		.lds-roller div:nth-child(1):after {
+			top: 62.62742px;
+			left: 62.62742px;
+		}
+
+		.lds-roller div:nth-child(2) {
+			-webkit-animation-delay: -0.072s;
+			animation-delay: -0.072s;
+		}
+
+		.lds-roller div:nth-child(2):after {
+			top: 67.71281px;
+			left: 56px;
+		}
+
+		.lds-roller div:nth-child(3) {
+			-webkit-animation-delay: -0.108s;
+			animation-delay: -0.108s;
+		}
+
+		.lds-roller div:nth-child(3):after {
+			top: 70.90963px;
+			left: 48.28221px;
+		}
+
+		.lds-roller div:nth-child(4) {
+			-webkit-animation-delay: -0.144s;
+			animation-delay: -0.144s;
+		}
+
+		.lds-roller div:nth-child(4):after {
+			top: 72px;
+			left: 40px;
+		}
+
+		.lds-roller div:nth-child(5) {
+			-webkit-animation-delay: -0.18s;
+			animation-delay: -0.18s;
+		}
+
+		.lds-roller div:nth-child(5):after {
+			top: 70.90963px;
+			left: 31.71779px;
+		}
+
+		.lds-roller div:nth-child(6) {
+			-webkit-animation-delay: -0.216s;
+			animation-delay: -0.216s;
+		}
+
+		.lds-roller div:nth-child(6):after {
+			top: 67.71281px;
+			left: 24px;
+		}
+
+		.lds-roller div:nth-child(7) {
+			-webkit-animation-delay: -0.252s;
+			animation-delay: -0.252s;
+		}
+
+		.lds-roller div:nth-child(7):after {
+			top: 62.62742px;
+			left: 17.37258px;
+		}
+
+		.lds-roller div:nth-child(8) {
+			-webkit-animation-delay: -0.288s;
+			animation-delay: -0.288s;
+		}
+
+		.lds-roller div:nth-child(8):after {
+			top: 56px;
+			left: 12.28719px;
+		}
+
+		@-webkit-keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes lds-roller {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@media print {
+
+			header,
+			footer {
+				display: none;
+			}
+		}
+	</style>
+
+	
+<script src="assets/js/vendors.js"></script>
+<script src="assets/js/app.js"></script>
+
+</head>
+
+<body class="page">
+    <div class="page-loader">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+    <header class="header__wrapper not_to_divide">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="No KYC">
+            </a>
+        </div>
+
+        <div class="header__mega_menu">
+            <div class="mega_menu__mobile_toggle" data-action="toggle-show-hide-mega-menu"></div>
+            <ul class="mega_menu__list" data-mega-menu >
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        No KYC
+                        Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Crypto Casinos
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">Lorem ipsum dolor sit.</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega_menu__item has_submenu">
+                    <a class="mega_menu__item_link has_submenu" href="/">
+                        Betting
+                    </a>
+                    <button class="mega_menu__item_submenu-trigger"></button>
+                    <ul class="mega_menu__item_submenu">
+                        <li class="">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 3</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 4</a>
+                        </li>
+                        <li class="">
+                            <a href="#">item 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__side">
+            <div class="site_search__btn" data-action="show-main-search">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.5 16C10.275 15.9996 11.9988 15.4054 13.397 14.312L17.793 18.708L19.207 17.294L14.811 12.898C15.905 11.4997 16.4996 9.77544 16.5 8C16.5 3.589 12.911 0 8.5 0C4.089 0 0.5 3.589 0.5 8C0.5 12.411 4.089 16 8.5 16ZM8.5 2C11.809 2 14.5 4.691 14.5 8C14.5 11.309 11.809 14 8.5 14C5.191 14 2.5 11.309 2.5 8C2.5 4.691 5.191 2 8.5 2Z"
+                        fill="white"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="site_search" data-main-search >
+        <div class="site_search__inner">
+            <div class="site_search__title">Suche nokyc.com</div>
+            <div class="site_search__close" data-action="hide-main-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                    <path
+                        d="M8.66522 6.49999L13.2724 1.90357C13.4741 1.70181 13.5875 1.42818 13.5875 1.14285C13.5875 0.857529 13.4741 0.583892 13.2724 0.382138C13.0706 0.180384 12.797 0.0670395 12.5117 0.0670395C12.2263 0.0670395 11.9527 0.180384 11.7509 0.382138L7.15451 4.98928L2.55808 0.382138C2.35633 0.180384 2.08269 0.0670395 1.79737 0.0670395C1.51204 0.0670395 1.23841 0.180384 1.03665 0.382138C0.834899 0.583892 0.721555 0.857529 0.721555 1.14285C0.721555 1.42818 0.834899 1.70181 1.03665 1.90357L5.6438 6.49999L1.03665 11.0964C0.93623 11.196 0.856522 11.3145 0.802127 11.4451C0.747732 11.5757 0.719727 11.7157 0.719727 11.8571C0.719727 11.9986 0.747732 12.1386 0.802127 12.2692C0.856522 12.3997 0.93623 12.5182 1.03665 12.6179C1.13626 12.7183 1.25476 12.798 1.38532 12.8524C1.51588 12.9068 1.65593 12.9348 1.79737 12.9348C1.93881 12.9348 2.07885 12.9068 2.20941 12.8524C2.33998 12.798 2.45848 12.7183 2.55808 12.6179L7.15451 8.01071L11.7509 12.6179C11.8505 12.7183 11.969 12.798 12.0996 12.8524C12.2302 12.9068 12.3702 12.9348 12.5117 12.9348C12.6531 12.9348 12.7931 12.9068 12.9237 12.8524C13.0543 12.798 13.1728 12.7183 13.2724 12.6179C13.3728 12.5182 13.4525 12.3997 13.5069 12.2692C13.5613 12.1386 13.5893 11.9986 13.5893 11.8571C13.5893 11.7157 13.5613 11.5757 13.5069 11.4451C13.4525 11.3145 13.3728 11.196 13.2724 11.0964L8.66522 6.49999Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <form class="site_search__form" role="search" method="get" action="">
+                <input class="site_search__input" type="text" value=""
+                    placeholder="300+ Gratiswetten, Bewertungen &amp; Promo-Codes" name="s">
+                <input style="background-image: url(assets/icons/search-img.svg);" class="site_search__submit" type="submit" value="" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</header>
+
+    <main id="app">
+        <div class="bread-wrapper-top">
+            <div class="container">
+                <div class="bread-wrapper">
+                    <div class="bread-inner">
+                        <span>
+                            <a class="entry-crumb" href="#">Startseite</a>
+                        </span>
+                        <span>
+                            »
+                        </span>
+                        <span>
+                            <a class="" href="#">Blog</a>
+                        </span>
+                        <span>
+                            »
+                        </span>
+                        <span class="last-crumb" style="text-transform: capitalize;">
+                            the inaugural esports world cup
+                            boasts a record 62 5 million prize pool
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages-outer">
+            <div class="container text-content">
+                <div class="col-12 col-fullwidth">
+                    <div class="page-header ">
+                        <h1>
+                            The inaugural Esports World Cup boasts a record $62.5 million prize pool
+                        </h1>
+                    </div>
+
+                    <div class="author_section__wrapper">
+                        <div class="author_section__avatar_and_meta">
+                            <a class="author_section__avatar" href="#">
+                                <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg" alt="">
+                            </a>
+                            <div class="author_section__meta">
+                                <a class="author_section__name" href="#">
+                                    vyom chaud
+                                </a>
+                                <div class="author_section__job_and_fact_checked">
+                                    <div class="author_section__label__wrapper">
+                                        <div class="author_section__label_icon">
+                                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_8510_29570)">
+                                                    <path
+                                                        d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                        fill=""></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_8510_29570">
+                                                        <rect width="10" height="10" fill="white"
+                                                            transform="translate(0 0.5)">
+                                                        </rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="author_section__label">
+                                            Editor-in-Chief
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="author_section__date">
+                                    Updated: <span>18 JULY 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="author_section__extra">
+                            <div class="btn_with_tooltip disclaimer">
+                                <div class="btn_with_tooltip__btn">
+                                    Disclosure</div>
+                                <div class="btn_with_tooltip__tip">
+                                    We sometimes use affiliate links in our content, when
+                                    clicking on those we might receive a commission - at no extra cost to you. By
+                                    using this
+                                    website you agree to our terms and conditions and privacy policy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        The first-ever Esports World Cup is currently being held in Riyadh, Saudi Arabia, from July 3 to
+                        August 25, 2024. As per the numbers presented by <a href="#">NoKyc.com</a>, the entire event
+                        boasts a record prize pool of $62.5 million.
+                    </p>
+
+                    <h2>
+                        <span>
+                            World Cup To Feature 21 Different Game Titles
+                        </span>
+                    </h2>
+
+                    <div class="aligncenter">
+                        <a href="https://nokyc.com/wp-content/uploads/2024/07/euro-prize-money-10.png.webp" data-fancybox>
+                            <img width="821" height="719" src="https://nokyc.com/wp-content/uploads/2024/07/euro-prize-money-10.png.webp" alt="">
+                        </a>
+                    </div>
+
+                    <p>
+                        The inaugural Esports World Cup, which is being touted as a landmark event in Esports history, features 22 events across 21 different video game titles. The event includes almost every popular competitive esports game, such as Apex Legends, CoD Warfare and MW3, Counter-Strike 2, DOTA 2, FC 24, Fortnite, Free Fire, Honor of Kings, Mobile Legends: Bang Bang (men & women), League of Legends, Overwatch 2, PUBG: Mobile, PUBG: Battlegrounds, Rainbow Six Siege, Rennsports, Rocket League, StarCraft II, Street Fighter 6, Teamfight Tactics, and Tekken 8.
+                    </p>
+                    <p>
+                        The World Cup, which will go on for more than a month, has replaced the previously held theGamers8 festival, which also took place in Saudi Arabia. Overall, 30 professional teams from the five major competitive regions – Europe, North America, Asia, South America, and the Middle East – are competing for the major prize haul.
+                    </p>
+                    <p>
+                        Of the overall prize money, $20m is reserved for the Club Championship. This cross-game competition will be determined by the performances of various competing clubs/teams in individual events. In any event, the first position is set to earn 1000 points for a team; the second position equates to 600 points, and so on, up until the eighth position. 
+                    </p>
+                    <p>
+                        The first team/club in the Club championship is slated to earn $7m. $4m is reserved for the second spot and $2m for the third spot. The top sixteen clubs/teams are guaranteed prize money, ranging from $7m to $150k, in the club championship.
+                    </p>
+                    <p>
+                        A further $33.8m is reserved for individual Game championships. This prize money will be divided amongst teams occupying top spots in 22 individual events.  $7.6 million in prize money is reserved for teams competing in qualifying events. 
+                    </p>
+                    <p>
+                        A total of $1.1m will be awarded to MVPs across the events, with the MVP of every tournament earning $50,000.
+                    </p>
+
+                    <div class="col-12 author-info-box ">
+                        <div class="pr-0 pl-0 author-avatar">
+                            <div class="pr-0 pl-0 author-avatar-img">
+                                <img src="https://nokyc.com/wp-content/uploads/2024/05/Vyom-Chaud-140x150.jpg" alt="">
+                            </div>
+                            <div class="author-avatar-social">
+                                <span class="social-iconssection"></span>
+                            </div>
+                        </div>
+                        <div class="author-description">
+                            <div class="author_inf">
+                                <div class="author_section__name">
+                                    vyom chaud
+                                    <div class="author_section__label__wrapper">
+                                        <div class="author_section__label_icon">
+                                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_8510_29570)">
+                                                    <path
+                                                        d="M8.70169 1.729L3.58867 6.81546L1.13308 4.36164L0 5.49472L3.77634 9.27106L10 3.02732L8.70169 1.729Z"
+                                                        fill=""></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_8510_29570">
+                                                        <rect width="10" height="10" fill="white"
+                                                            transform="translate(0 0.5)">
+                                                        </rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="author_section__label">
+                                            Betting Expert
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="author-mobile-social">
+                                    <span class="social-iconssection">
+                                        <a href="#" rel="nofollow" target="_blank"
+                                            class="fi-global__background-image__linkedin">
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <p>Vyom Chaud left his IT job to follow his love for soccer. He has been writing about the beautiful game for the last 6 years contributing articles to The Daily Mail, Vocal, Fan Sided and many other publications. He can spin stories with numbers and thinks data is beautiful. An avid Arsenal fan, he spends most of his time dissecting the nuances of the game. He has played football, cricket and badminton at an amateur level.</p>
+                            <div class="author-link">
+                                <a href="#" rel="author">
+                                    View all posts by Vyom Chaud
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-info">
+    <div class="background-container">
+        <div class="container">
+            <div class="footer-info__head">
+                <div class="footer-info__logo">
+                    <a href="/"> 
+                        <img src="https://nokyc.com/wp-content/uploads/2023/12/OnDark.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-info__icons">
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/twitter.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/linkeding.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="img-svg" src="assets/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 footer-one footer2">
+
+                    <div class="widget nav_menu-8 widget_nav_menu">
+
+                        <p class="widget-title">About</p>
+
+                        <div class="menu-footer-menu-container">
+                            <ul class="menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a href="#">About us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16627">
+                                    <a href="#">Contuct us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16628">
+                                    <a href="#">How we rate</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16629">
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16630">
+                                    <a href="#">Sitemaps</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 pr-0 pl-0 text-center copy">
+                    <section class="widget text-7 widget_text">
+                        <div class="textwidget">
+                            <p>© nokyc.com All Rights Reserved<!--?=date('Y')?--></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 footer-logo-inner text-center">
+        <div class="container">
+            <div class="col-12 footerlast">
+                <section class="widget text-13 widget_text">
+                    <div class="textwidget">
+                        <div class="footer-logo">
+                            <ul class="footer-info__logo-list">
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamblers-anonymous-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/mga-license-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/curacao-egaming-logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/betblocker-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/gamban-logo-light.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://www.bitcoincasinos.com/wp-content/uploads/2023/08/18.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget text-12 widget_text">
+                    <div class="textwidget">
+                        <p>
+                            Users must be 18+. If you or someone close to you is struggling with gambling addiction
+                            issues, contact 1-800 GAMBLER for assistance immediately.
+                        </p>
+                        <p>
+                            This site is protected by reCAPTCHA and the Google&nbsp;
+                            <a href="#" > Privacy Policy </a>
+                            &nbsp;and&nbsp;
+                            <a href="#" >Terms of Service</a>&nbsp;apply.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

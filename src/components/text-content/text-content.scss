@@ -90,6 +90,10 @@ ul {
             }
         }
     }
+
+    & ol {
+        margin-bottom: 15px;
+    }
 }
 
 .su-u-clearfix::after {

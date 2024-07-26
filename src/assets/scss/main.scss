@@ -776,7 +776,7 @@ body {
 
 #app .su-row .su-column-size-1-2 .su-column-inner>h4:not(empty):before,#app .su-row .su-column-size-1-2 .su-column-inner>p:first-child:not(empty):before {
     background-size: 24px 24px!important;
-    background: url(/wp-content/themes/sage/public/images/list-cons.svg) no-repeat;
+    background: var(--icon-x-bold-circle-red) no-repeat;
     content: "";
     display: block;
     height: 24px;
@@ -795,14 +795,14 @@ body {
 }
 
 #app .su-row .su-column-size-1-2:first-child .su-column-inner>h4:not(empty):before,#app .su-row .su-column-size-1-2:first-child .su-column-inner>p:first-child:not(empty):before {
-    background: url(/wp-content/themes/sage/public/images/list-pros.svg) no-repeat
+    background: var(--icon-check-bold-circle-green) no-repeat
 }
 
 ul.su-list {
     margin-left: 0 !important;
     list-style: none !important;
     & > li {
-        background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' width='20' height='20' rx='10' fill='%23E1F4ED'/%3E%3Cpath d='M6.25635 9.92672L9.13432 12.8047L14.7437 7.19531' stroke='%231C2642' stroke-width='2'/%3E%3C/svg%3E ");
+        background-image: var(--icon-check-circle-green);
         background-position: 0 2px;
         background-repeat: no-repeat;
         background-size: 20px;
@@ -813,6 +813,12 @@ ul.su-list {
 
         &:last-child {
             padding-bottom: 0 !important;
+        }
+    }
+
+    &.x-icons {
+        & > li {
+            background-image: var(--icon-x-circle-green);
         }
     }
 }
@@ -3273,13 +3279,13 @@ td img,th img {
     display: none
 }
 
-body.author nav.pagination .nav-links,body.blog nav.pagination .nav-links {
+nav.pagination .nav-links, nav.pagination .nav-links {
     display: flex;
     justify-content: center;
     margin-top: 16px
 }
 
-body.author nav.pagination .nav-links>.page-numbers,body.blog nav.pagination .nav-links>.page-numbers {
+nav.pagination .nav-links>.page-numbers, nav.pagination .nav-links>.page-numbers {
     align-items: center;
     background: #fff;
     border: 1px solid #e8e8e8;
@@ -3296,11 +3302,11 @@ body.author nav.pagination .nav-links>.page-numbers,body.blog nav.pagination .na
     width: 44px
 }
 
-body.author nav.pagination .nav-links>.page-numbers:not(:last-child),body.blog nav.pagination .nav-links>.page-numbers:not(:last-child) {
+nav.pagination .nav-links>.page-numbers:not(:last-child), nav.pagination .nav-links>.page-numbers:not(:last-child) {
     border-right: 0
 }
 
-body.author nav.pagination .nav-links>.page-numbers .arrow,body.blog nav.pagination .nav-links>.page-numbers .arrow {
+nav.pagination .nav-links>.page-numbers .arrow, nav.pagination .nav-links>.page-numbers .arrow {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%231C2642' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.666 8H3.333M8 12.667 3.333 8 8 3.333'/%3E%3C/g%3E%3C/svg%3E");
     background-position: 50%;
     background-repeat: no-repeat;
@@ -3308,15 +3314,15 @@ body.author nav.pagination .nav-links>.page-numbers .arrow,body.blog nav.paginat
     width: 16px
 }
 
-body.author nav.pagination .nav-links>.page-numbers.next,body.blog nav.pagination .nav-links>.page-numbers.next {
+nav.pagination .nav-links>.page-numbers.next, nav.pagination .nav-links>.page-numbers.next {
     transform: rotate(180deg)
 }
 
-body.author nav.pagination .nav-links>.page-numbers.current,body.blog nav.pagination .nav-links>.page-numbers.current {
+nav.pagination .nav-links>.page-numbers.current, nav.pagination .nav-links>.page-numbers.current {
     background: #f0f3f7
 }
 
-body.author nav.pagination .nav-links>.page-numbers.disabled .arrow,body.blog nav.pagination .nav-links>.page-numbers.disabled .arrow {
+nav.pagination .nav-links>.page-numbers.disabled .arrow, nav.pagination .nav-links>.page-numbers.disabled .arrow {
     opacity: .2
 }
 
