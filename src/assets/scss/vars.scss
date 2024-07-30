@@ -9,10 +9,11 @@ $touch-device: "(hover: none) and (pointer: coarse)";
 
 $font-size: 1.6rem;
 
-$mainFontFamily: "SBSFont", sans-serif;
+$mainFontFamily: "CircularStd", sans-serif;
 
 :root {
-    --bm-font-family: SBSFont, sans-serif;
+    --bm-font-family: CircularStd, sans-serif;
+    --primary-font-family: CircularStd, sans-serif;
     --core-white: #FFFFFF;
     --main-accent: #0FCEA0;
     --main-action: #0FCEA0;
