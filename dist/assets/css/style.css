@@ -12630,6 +12630,9 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
   background-color: #fff;
   max-width: 500px;
 }
+.newsletter__form > .wpcf7-form-control-wrap {
+  width: 100%;
+}
 .newsletter__form input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
