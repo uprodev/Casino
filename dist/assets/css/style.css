@@ -11987,6 +11987,40 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
   padding: 8px 16px;
 }
 
+nav.pagination .nav-links ul.page-numbers {
+  list-style: none;
+  width: auto;
+}
+nav.pagination .nav-links ul.page-numbers > li {
+  padding-bottom: 0 !important;
+}
+nav.pagination .nav-links ul.page-numbers > li .page-numbers {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+nav.pagination .nav-links ul.page-numbers > li .page-numbers.current {
+  background-color: #f0f3f7;
+}
+nav.pagination .nav-links ul.page-numbers > li .page-numbers.next .arrow {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+nav.pagination .nav-links ul.page-numbers > li:not(:first-child) .page-numbers {
+  border-left: 1px solid #e8e8e8;
+}
+
 .mega_menu__item_submenu-trigger {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.566.597a.714.714 0 0 1 .786.124l2.468 2.29a1 1 0 0 0 1.36 0L7.65.721a.714.714 0 1 1 .97 1.047L5.18 4.96a1 1 0 0 1-1.36 0L.38 1.769A.714.714 0 0 1 .567.596Z' fill='%23fff'/%3E%3C/svg%3E");
   background-position: 50%;
@@ -12629,9 +12663,16 @@ div#app .su-row .su-column-size-1-2:first-child .su-column-inner > p:first-child
   border-radius: 999px;
   background-color: #fff;
   max-width: 500px;
+  position: relative;
+  margin-bottom: 8px;
 }
 .newsletter__form > .wpcf7-form-control-wrap {
   width: 100%;
+}
+.newsletter__form .wpcf7-not-valid-tip {
+  position: absolute;
+  top: calc(100% + 8px);
+  padding: 0 20px;
 }
 .newsletter__form input {
   -webkit-box-flex: 1;

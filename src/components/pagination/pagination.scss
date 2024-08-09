@@ -1,0 +1,37 @@
+nav.pagination {
+    & .nav-links {
+        & ul.page-numbers {
+            list-style: none;
+            width: auto;
+
+            & > li {
+                padding-bottom: 0 !important;
+                & .page-numbers  {
+                    width: 44px;
+                    height: 44px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    font-weight: 700;
+
+                    &.current {
+                        background-color: #f0f3f7;
+                    }
+
+                    &.next {
+                        & .arrow {
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+
+                &:not(:first-child) {
+                    & .page-numbers {
+                        border-left: 1px solid #e8e8e8;
+                    }
+                }
+            }
+        }
+    }
+}
